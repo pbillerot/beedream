@@ -1,95 +1,43 @@
-# 🌱 hugo-theme-dream
+# THEME HUGO - BEEDREAM
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/g1eny0ung/hugo-theme-dream)
-![Hugo min version](https://img.shields.io/badge/hugo--min--version-0.57.2-important)
-![GitHub](https://img.shields.io/github/license/g1eny0ung/hugo-theme-dream)
+https://gohugo.io/
 
-- [Note After v1.1.0](#note-after-v110)
-- [Major update in 2019-11-10](#major-update-in-2019-11-10)
-- [Intro](#intro)
-- [Documentation](#documentation)
-- [Installation](#installation)
-- [Example](#example)
-- [Publish](#publish)
-
-## Note After v1.1.0
-
-> It's needed to set the **`about`** folder to **`Headless Bundle`**.
-
-Related docs:
-
-<https://g1eny0ung.site/hugo-theme-dream/#/quick-start?id=add-quotabout-mequot>
-
-<https://g1eny0ung.site/hugo-theme-dream/#/about-page>
-
-<https://gohugo.io/content-management/page-bundles/#headless-bundle>
-
-## Major update in 2019-11-10
-
-I completely rewrite the page layout to [masonry layout](https://masonry.desandro.com/).
-
-Correspondingly, the configuration (`config.toml`) also has some breaking changes.
-
-Please refer to the documentation for details.
-
-If you have other problems, you can also ask in the [issues](https://github.com/g1eny0ung/hugo-theme-dream/issues).
-
-## Intro
-
-Dream is a [Hugo](https://gohugo.io/) theme. I build it for [my blog](http://g1eny0ung.site).
-
-The main features are **full page flip** and **masonry layouts views**.~
-
-Dream also support **light mode** and **dark mode** out of the box.
-
-demo: [https://themes.gohugo.io/theme/hugo-theme-dream/](https://themes.gohugo.io/theme/hugo-theme-dream/)
-
-![https://raw.githubusercontent.com/g1eny0ung/hugo-theme-dream/master/images/screenshot.png](https://raw.githubusercontent.com/g1eny0ung/hugo-theme-dream/master/images/screenshot.png)
-
-All tags of this theme:
-
-- flip
-- masonry layouts
-- i18n
-- blog
-- google-analytics
-- disqus
-- responsive
-- copyright
-- avatar
-- motto
-- social links
-- creative
-- personal
-- light mode
-- dark mode
-- search
-
-## Documentation
-
-[https://g1eny0ung.site/hugo-theme-dream](https://g1eny0ung.site/hugo-theme-dream)
-
-## Installation
-
-Go into your blog folder and:
-
-```sh
-cd themes
-git clone https://github.com/g1eny0ung/hugo-theme-dream.git dream
+## Installation de Hugo
+- https://gohugo.io/getting-started/installing/#fetch-from-github
+```
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install
 ```
 
-Then open your `config.toml` and edit to `theme = "dream"` and save.
 
-## Example
+## Aide sur Markdown
+- https://guides.github.com/features/mastering-markdown/
+- https://www.webfx.com/tools/emoji-cheat-sheet/
+- https://www.markdownguide.org/basic-syntax/
 
-[My Blog](https://g1eny0ung.site)
+## Fichiers personnaisés
 
-[My Blog's Source Code](https://github.com/g1eny0ung/blog)
+theme/dreamexpo  :smile: 
+- /data
+  - fr.toml (date format french)
+- /i18n
+  - fr.toml (mot in french)
+- /layouts
+  - index.html définit main et js
+  - /categories
+    - terms.html (liste des catégories)
+  - /_default
+    - baseof.html
+    - list.html la page principale avec _header et summary
+    - single.html (template article)
+    - summary.html (template carte article)
+  - /partials
+    - header.html (template carte de navigation)
+    - nav.html (ligne de navigation home)
+  - /posts
+    - section.html (liste des archives)
+  - /tags
+    - terms.html (liste des tags)
 
-## Publish
 
-View [hugo hosting-and-deployment](https://gohugo.io/hosting-and-deployment/)
-
-## License
-
-MIT © [g1eny0ung](https://github.com/g1eny0ung)
