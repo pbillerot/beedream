@@ -9,7 +9,10 @@ git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install
 ```
-
+## Installation du thème
+- git submodule add git@github.com:pbillerot/beedream.git themes/beedream
+- git submodule Init
+- git submodule update
 
 ## Aide sur Markdown
 - https://guides.github.com/features/mastering-markdown/
