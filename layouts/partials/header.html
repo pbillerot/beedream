@@ -10,7 +10,7 @@
 
     <h1 class="ui medium header">
       {{- .Site.Data.config.title -}}
-      <div class="sub header" style="margin-top: 0.5rem;">{{- .Site.Data.config.subtitle -}}</div>
+      <div class="sub header" style="margin-top: 0.5rem;">{{ .Site.Data.config.subtitle }}</div>
     </h1>
 
     <!-- <div class="ui horizontal list">
@@ -76,6 +76,21 @@
     </div><!-- /content-->
     {{ end }}
     {{ end }}
+    {{ if isset .Site.Data.config "links" }}
+    {{ $links := .Site.Data.config.links }}
+    <div class="content">
+      <div class="ui list">
+    {{ range $index, $link := $links }}
+        <div class="item">
+          <div class="content">
+            {{ $link }}
+          </div>
+        </div>
+        {{ end }}
+      </div><!-- /list-->
+    </div><!-- /content-->
+  {{ end }}
+
   </section>
   {{ end }}
 

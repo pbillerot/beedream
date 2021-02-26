@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ define "main"}}
-<div class="ui centered relaxed grid dream-grid">
+<div class="ui centered relaxed grid dream-grid bee-todo">
   <div
     class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
     {{ partial "header.html" . }}
@@ -27,7 +27,7 @@
 {{ end }}
 
 {{ define "js" }}
-<script src="{{ " /js/imagesloaded.pkgd.min.js" | relURL }}"></script>
-<script src="{{ " /js/masonry.pkgd.min.js" | relURL }}"></script>
-<script src="{{ " /js/grid.js" | relURL }}"></script>
+<script src="{{ "/js/imagesloaded.pkgd.min.js" | relURL }}"></script>
+<script src="{{ "/js/masonry.pkgd.min.js" | relURL }}"></script>
+<script src="{{ "/js/grid.js" | relURL }}"></script>
 {{ end }}

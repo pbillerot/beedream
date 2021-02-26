@@ -2,6 +2,4 @@
     Affichage de colonnes
 -->
 {{$wide := .Get 0 | default 16}}
-<div class="{{$wide}} wide column centered">
-{{ .Inner }}
-</div>
+<div class="{{$wide}} wide column centered">{{ .Inner }}</div>

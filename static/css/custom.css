@@ -25,16 +25,43 @@ body, .ui.header {
 .ui.icon.message.bee-player
 , .ui.icon.message.bee-modal-image 
 , .ui.icon.message.bee-open 
+, .ui.icon.message.bee-window-open 
 {
     width: inherit;
 }
-
+/* Carte */
+.ui.card>.content>.description, .ui.cards>.card>.content>.description {
+    font-family: Lato;
+    font-size: 0.87em;
+}
+.ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
+    font-family: Lato;
+    font-size: 1em;
+}
+ui.cards>.card {
+    width: 150px
+}
 /* markdown */
 .markdown-body {
     font-family: inherit;
 }
-.markdown-body h4 {
-    color: red;
+pre {
+    white-space: pre-wrap;
+    padding: 0.5em;
+}
+.markdown-body pre code {
+    white-space: pre-wrap;
+}
+.ui.header.bee-texte {
+    margin: 1rem 0 1rem;
+}
+.ui.header .icon:only-child, i.icon.bee-icon {
+    margin-right: 0;
+}
+.ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: inherit;
+}
+.bee-centre {
     text-align: center;
 }
 /* bee-chanson */

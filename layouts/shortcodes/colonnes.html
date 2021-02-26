@@ -1,4 +1,10 @@
 <!-- 
     Colonnes
 -->
-<div class="ui stackable centered grid">{{ .Inner }}</div>
+{{$nbcols := .Get 0 | default "two"}}
+{{ $optBlock := dict "display" "inline" }}
+<div class="ui stackable {{ $nbcols }} column grid">
+{{ range split .Inner "<--->" }}
+<div class="column">{{ . | markdownify }}</div>
+{{ end }}
+</div>

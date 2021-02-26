@@ -48,15 +48,19 @@ $(document).ready(function () {
         var $src = $(this).data('img');
         if (!$src) {
             $src = $(this).find('img').attr('src');
+        } else {
+            $src = computePath($src);
         }
         $('#bee-modal-image').find('img').attr('src', $src);
         if ($pdf) {
             $('#bee-modal-image').find('.approve').removeClass("bee-hidden");
+            $pdf = computePath($pdf);
         }
         $('#bee-modal-image')
             .modal({
                 closable: true,
                 onHide: function () {
+                    $('#bee-modal-image').find('.approve').addClass("bee-hidden");
                     return true;
                 },
                 onApprove: function () {

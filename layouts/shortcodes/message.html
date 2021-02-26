@@ -1,7 +1,4 @@
 <!-- 
-    Affichage d'un message
+    Affichage d'un message info success warning error
 -->
-{{$type := .Get 0 | default ""}}
-<div class="ui {{$type}} message">
-{{ .Inner }}
-</div>
+<div class="ui {{ .Get 0 }} message">{{ .Inner | markdownify }}</div>

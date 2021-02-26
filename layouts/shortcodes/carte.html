@@ -1,0 +1,40 @@
+<!-- 
+    Affichage d'une carte'
+    taille : tiny: 80, small: 150, medium: 300, large: 450
+    image : image couverture
+    diapo : diapositive à zoomer par clic
+    titre : titre
+    url : lien sur clic sur la carte
+    pdf : lien pdf
+-->
+{{$title := .Get "titre" | default ""}}
+{{$texte := .Get "texte" | default ""}}
+{{$img := .Get "image" | default ""}}
+{{$url := .Get "lien" | default ""}}
+{{$pdf := .Get "pdf" | default ""}}
+{{$inner := .Inner | markdownify}}
+{{ if .Parent }}
+<div {{if and $img $pdf}}class="card bee-modal-image" data-img="{{$img}}" data-pdf="{{$pdf}}"{{else if $url}}class="card bee-window-open" data-path="{{$url}}"{{else if $img}}class="card bee-modal-image" data-img="{{$img}}"{{else}}class="card"{{end}}>
+    {{ if $img }}
+    <div class="image">
+        <img src="{{$img}}">
+    </div>
+    {{end}}
+    {{ if $title }}
+    <div class="content">
+        <div class="{{if eq $inner ``}}center aligned {{end}}header">{{ $title }}</div>
+        {{end}}
+        {{ if gt (len $inner) 0 }}
+        <div class="description">{{ $inner }}</div>
+        {{end}}
+    </div>
+    {{ if $pdf }}
+    <div class="ui bottom attached button bee-window-open" data-path="{{ $pdf }}">
+        <i class="file pdf icon"></i>
+        Télécharger le document
+    </div>
+    {{end}}
+</div>
+{{ else }}
+{{ errorf "%q: 'carte' doit être inclus dans 'cartes'" .Page.Path }}
+{{ end}}
