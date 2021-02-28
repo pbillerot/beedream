@@ -244,4 +244,17 @@ $(document).ready(function () {
         },
     } // end $player
 
+    /**
+     * Appel Masonry pour afficher les galeries
+     * https://masonry.desandro.com/
+     */
+    // init Masonry
+    var $grid = $('.bee-masonry').masonry({
+      // options...
+      itemSelector: '.column'
+    });
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });
 });

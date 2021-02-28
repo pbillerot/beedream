@@ -1,0 +1,20 @@
+<!-- 
+    Affichage des images d'un répertoire
+    repertoire   : répertoire des images
+-->
+<div class="ui centered relaxed grid bee-masonry">
+{{$dir := .Get 0}}
+{{ range readDir (printf "/content%s" $dir ) }}
+{{$path := printf "%s/%s" $dir .Name }}
+{{$base := path.Base .Name }}
+{{$ext := path.Ext .Name }}
+{{$noext := strings.Replace $base $ext "" }}
+{{ if in ".svg .png .jpg .jpeg .gif" $ext }}
+<div class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column">
+    <div class="ui image">
+        <img src="{{ $path }}">
+    </div>
+</div>
+{{end}}
+{{ end }}
+</div>
