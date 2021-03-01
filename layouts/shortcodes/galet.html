@@ -1,0 +1,17 @@
+<!-- 
+    Affichage d'une image d'une gallerie
+-->
+{{$image := .Get "image"}}
+{{ if $.Page.Scratch.Get "diaporama" }}
+<a class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column bee-item-masonry" href="{{ $image }}">
+    <div class="ui image">
+        <img src="{{ $image }}">
+    </div>
+</a>
+{{else}}
+<div class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column bee-item-masonry">
+    <div class="ui image">
+        <img src="{{ $image }}">
+    </div>
+</div>
+{{end}}

@@ -38,9 +38,19 @@ body, .ui.header {
     font-family: Lato;
     font-size: 1em;
 }
-ui.cards>.card {
-    width: 150px
+.ui.cards>.bee-card-petite {
+    width: 160px;
 }
+.ui.cards>.bee-card-moyenne {
+    width: 274px;
+}
+.ui.cards>.bee-card-grande {
+    width: 450px;
+}
+.ui.cards>.bee-card-large {
+    width: 740px;
+}
+
 /* markdown */
 .markdown-body {
     font-family: inherit;

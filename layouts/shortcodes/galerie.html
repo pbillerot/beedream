@@ -2,19 +2,35 @@
     Affichage des images d'un répertoire
     repertoire   : répertoire des images
 -->
-<div class="ui centered relaxed grid bee-masonry">
+{{ if not ($.Page.Scratch.Get "galerie") }}
+  {{ $.Page.Scratch.Set "galerie" 1 }}
+{{end}}
+<div class="ui centered relaxed grid bee-masonry" id="galerie">
 {{$dir := .Get 0}}
+{{ if $dir }}
 {{ range readDir (printf "/content%s" $dir ) }}
 {{$path := printf "%s/%s" $dir .Name }}
 {{$base := path.Base .Name }}
 {{$ext := path.Ext .Name }}
 {{$noext := strings.Replace $base $ext "" }}
 {{ if in ".svg .png .jpg .jpeg .gif" $ext }}
-<div class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column">
+{{ if $.Page.Scratch.Get "diaporama" }}
+<a class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column bee-item-masonry" href="{{ $path }}">
+    <div class="ui image">
+        <img src="{{ $path }}">
+    </div>
+</a>
+{{else}}
+<div class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column bee-item-masonry">
     <div class="ui image">
         <img src="{{ $path }}">
     </div>
 </div>
-{{end}}
-{{ end }}
+{{end}} <!-- end if diaporama -->
+{{end}}<!-- end if $ext -->
+{{end }}<!-- end range -->
+{{else}}
+<!-- end if diaporama -->
+{{ .Inner | markdownify }}
+{{end}}<!-- end if $dir -->
 </div>

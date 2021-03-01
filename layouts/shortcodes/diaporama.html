@@ -1,5 +1,6 @@
 <!-- 
-    Affichage de diapositives
+    LIGHTBOX sur une galerie d'images masonry
 -->
-{{$size := .Get "taille" | default "medium" }}
-<div id="bee-diaporama" data-size="{{$size}}" class="ui centered cards">{{.Inner}}</div>
+{{ if not ($.Page.Scratch.Get "diaporama") }}
+  {{ $.Page.Scratch.Set "diaporama" 1 }}
+{{end}}

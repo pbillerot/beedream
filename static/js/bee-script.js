@@ -71,7 +71,7 @@ $(document).ready(function () {
     });
 
     // diaporama
-    if ($('#bee-diaporama')) {
+    if ($('#bee-diaporama').length > 0) {
         var $diapo_size = $('#bee-diaporama').data('size')
         var $heights = {
             mini: 35, tiny: 80, small: 150, medium: 300, large: 450, big: 600, huge: 800, massive: 960
@@ -249,12 +249,14 @@ $(document).ready(function () {
      * https://masonry.desandro.com/
      */
     // init Masonry
-    var $grid = $('.bee-masonry').masonry({
-      // options...
-      itemSelector: '.column'
-    });
-    // layout Masonry after each image loads
-    $grid.imagesLoaded().progress( function() {
-      $grid.masonry('layout');
-    });
+    if ($('#galerie').length > 0) {
+        var $grid = $('#galerie').masonry({
+            // options...
+            itemSelector: '.bee-item-masonry'
+        });
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress(function () {
+            $grid.masonry('layout');
+        });
+    }
 });
