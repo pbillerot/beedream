@@ -45,24 +45,22 @@
       {{ range .Site.Menus.main }}
       <div class="item">
         {{ if .HasChildren }}
-        <div class="header {{ if $currentPage.HasMenuCurrent `main` . }}active{{ end }}">
-          <a href="#">
-            {{ .Pre }}
-            <span>{{ .Name }}</span>
-          </a>
+        <div class="{{ if $.HasMenuCurrent `main` . }}active{{ end }} title">
+          <i class="dropdown icon"></i>
+          <span>{{ .Name }}</span>
         </div>
-        <div class="menu">
+        <div class="{{ if $.HasMenuCurrent `main` . }}active{{ end }} content">
+          <div class="menu">
           {{ range .Children }}
-          <div class="item {{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
-            <a href="{{ .URL }}">{{ .Name }}</a>
-          </div>
+          <a class="item {{ if $.IsMenuCurrent `main` . }}active{{ end }}"
+          href="{{ .URL }}">{{ .Name }}</a>
           {{ end }}
+          </div>
         </div>
         {{ else }} 
         <!-- no children -->
-        <div class="header {{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </div>
+        <a class="{{ if $.IsMenuCurrent `main` . }}active{{ end }} title" 
+          href="{{ .URL }}">{{ .Title }}</a>
         {{ end }}
       </div> <!-- end item -->
       {{ end }}<!-- end range menu-->
