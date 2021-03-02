@@ -3,7 +3,7 @@
 # à redéfinir dans /data/config.yaml
 #
 title: "TITRE DU SITE"
-subtitle: "Sous-titre du site"
+# subtitle: "Sous-titre du site"
 
 # l'image arrondie
 avatar: "/img/hugo.png"

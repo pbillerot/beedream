@@ -29,6 +29,11 @@ body, .ui.header {
 {
     width: inherit;
 }
+/* Menu */
+.ui.vertical.menu {
+    width: unset;
+}
+
 /* Carte */
 .ui.card>.content>.description, .ui.cards>.card>.content>.description {
     font-family: Lato;
@@ -38,16 +43,16 @@ body, .ui.header {
     font-family: Lato;
     font-size: 1em;
 }
-.ui.cards>.bee-card-petite {
+.ui.cards>.bee-card-petite, .bee-card-petite {
     width: 160px;
 }
-.ui.cards>.bee-card-moyenne {
+.ui.cards>.bee-card-moyenne, .bee-card-moyenne {
     width: 274px;
 }
-.ui.cards>.bee-card-grande {
+.ui.cards>.bee-card-grande, .bee-card-grande {
     width: 450px;
 }
-.ui.cards>.bee-card-large {
+.ui.cards>.bee-card-large, .bee-card-large {
     width: 740px;
 }
 

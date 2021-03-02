@@ -259,4 +259,10 @@ $(document).ready(function () {
             $grid.masonry('layout');
         });
     }
+
+    /**
+     * SEMANTIC
+     */
+    $('.ui.accordion').accordion();
+    
 });

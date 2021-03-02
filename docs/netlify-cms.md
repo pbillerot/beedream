@@ -6,7 +6,7 @@ To use it, create an `admin` folder in your `static` directory, then copy the co
 
 if you want to dig into the details, please view:
 
-<https://www.netlifycms.org/docs/add-to-your-site/>
+<https://www.netlifycms.org/add-to-your-site/>
 
 If you haven't know how to deploy your site to Netlify, please read:
 
