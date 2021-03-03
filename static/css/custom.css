@@ -33,7 +33,12 @@ body, .ui.header {
 .ui.vertical.menu {
     width: unset;
 }
-
+.ui.accordion.menu .item> .active {
+    font-weight: 900;
+}
+.ui.vertical.menu .item .menu .active.item {
+    font-weight: 900;
+}
 /* Carte */
 .ui.card>.content>.description, .ui.cards>.card>.content>.description {
     font-family: Lato;

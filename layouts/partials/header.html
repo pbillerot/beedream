@@ -1,4 +1,5 @@
 <article class="dream-header">
+  <!-- TITRE -->
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
       {{ if isset .Site.Data.config "avatar" }}
@@ -28,47 +29,20 @@
       </a> -->
     <!-- </div> -->
   </section>
+  <!-- /TITRE -->
 
   {{ if .Site.Taxonomies.tags }}
+  <!-- TAGS -->
   <section class="ui attached center aligned segment dream-tags">
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
     <a class="ui label" href="{{ `tags/` | relLangURL }}{{ $name | urlize }}/" title="{{ $name }}">#{{ $name }}</a>
     {{ end }}
   </section>
+  <!-- /TAGS -->
   {{ end }}
 
-  {{ if .Site.Menus }}
-  <!-- MENU -->
-  <section class="ui bottom attached segment dream-categories" style="background-color: #e8e8e8;">
-    <div class="ui vertical accordion menu">
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-      <div class="item">
-        {{ if .HasChildren }}
-        <div class="{{ if $.HasMenuCurrent `main` . }}active{{ end }} title">
-          <i class="dropdown icon"></i>
-          <span>{{ .Name }}</span>
-        </div>
-        <div class="{{ if $.HasMenuCurrent `main` . }}active{{ end }} content">
-          <div class="menu">
-          {{ range .Children }}
-          <a class="item {{ if $.IsMenuCurrent `main` . }}active{{ end }}"
-          href="{{ .URL }}">{{ .Name }}</a>
-          {{ end }}
-          </div>
-        </div>
-        {{ else }} 
-        <!-- no children -->
-        <a class="{{ if $.IsMenuCurrent `main` . }}active{{ end }} title" 
-          href="{{ .URL }}">{{ .Title }}</a>
-        {{ end }}
-      </div> <!-- end item -->
-      {{ end }}<!-- end range menu-->
-    </div>
-  </section>
-  <!-- /MENU -->
-  {{ else}}
   {{ if .Site.Taxonomies.categories }}
+  <!-- NEWS -->
   <section class="ui attached segment dream-categories">
     {{ $categories := .Site.Taxonomies.categories }}
     {{ range $name, $taxonomy := $categories }}
@@ -88,10 +62,43 @@
     {{ end }}
     {{ end }}
   </section>
+  <!-- /NEWS -->
   {{ end }}
 
-  {{ if .Site.Taxonomies.categories }}
+  {{ if or .Site.Menus .Site.Taxonomies.categories}}
   <section class="ui bottom attached segment dream-categories" style="background-color: #e8e8e8;">
+  {{ if .Site.Menus }}
+  <!-- MENU -->
+    <div class="ui vertical accordion menu">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <div class="item">
+        {{ if .HasChildren }}
+        <div class="{{ if or ($.HasMenuCurrent `main` .) false }}active{{ end }} title">
+          <i class="dropdown icon"></i>
+          <span>{{ .Name }}</span>
+        </div>
+        <div class="{{ if or ($.HasMenuCurrent `main` .) false }}active{{ end }} content">
+          <div class="menu">
+          {{ range .Children }}
+          <a class="item {{ if $.IsMenuCurrent `main` . }}active{{ end }}"
+          href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+          </div>
+        </div>
+        {{ else }} 
+        <!-- no children -->
+        <a class="{{ if $.IsMenuCurrent `main` . }}active{{ end }} title" 
+          href="{{ .URL }}">{{ .Title }}</a>
+        {{ end }}
+      </div> <!-- end item -->
+      {{ end }}<!-- end range menu-->
+    </div>
+  <!-- /MENU -->
+  {{ end}}
+
+  {{ if .Site.Taxonomies.categories }}
+  <!-- LINKS -->
     {{ $categories := .Site.Taxonomies.categories }}
     {{ range $name, $taxonomy := $categories }}
     {{ if (eq $name "links") }}
@@ -108,7 +115,7 @@
     </div><!-- /content-->
     {{ end }}
     {{ end }}
-    <!-- LINKS -->
+    <!-- links dans config -->
     {{ if isset .Site.Data.config "links" }}
     {{ $links := .Site.Data.config.links }}
     <div class="content">
@@ -123,12 +130,11 @@
       </div><!-- /list-->
     </div><!-- /content-->
     {{ end }}
-    <!-- /LINKS -->
+  <!-- /LINKS -->
+  {{ end }}
   </section>
   {{ end }}
-
-  {{end}}
-  <!-- /menu -->
+  <!-- /menu /categories-->
 
   <!-- <section class="ui grey inverted bottom attached center aligned segment">
     {{ if .Site.Params.siteStartYear }}

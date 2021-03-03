@@ -38,13 +38,7 @@
 
   favicon = "/favicon.ico"
 
-  highlightjs = true
-  # highlightjsCDN = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"
-  highlightjsExtraLanguages = ["ocaml"]
-  highlightjsTheme = "gruvbox-light"
-  highlightjsThemeDark = "gruvbox-dark"
-
-  # search
+    # search
   enableSearch = true
 
   # options
