@@ -11,7 +11,7 @@
 
     <h1 class="ui medium header">
       {{- .Site.Data.config.title -}}
-      {{ with .Site.Data.config.subtitle }}
+      {{ if .Site.Data.config.subtitle }}
       <div class="sub header" style="margin-top: 0.5rem;">{{ .Site.Data.config.subtitle }}</div>{{end}}
     </h1>
 
@@ -43,10 +43,14 @@
 
   {{ if .Site.Taxonomies.categories }}
   <!-- NEWS -->
-  <section class="ui attached segment dream-categories">
+  {{ $bsection := false }}
     {{ $categories := .Site.Taxonomies.categories }}
     {{ range $name, $taxonomy := $categories }}
     {{ if (eq $name "news") }}
+    {{ if not $bsection }}
+  <section class="ui attached segment dream-categories">
+    {{ $bsection := true }}
+    {{end}}
     <div class="content">
       <div class="ui ribbon label">{{ T "news"}}</div>
       <div class="ui list">
@@ -61,7 +65,9 @@
     </div><!-- /content-->
     {{ end }}
     {{ end }}
-  </section>
+    {{ if $bsection }}
+  </section> 
+    {{end}}
   <!-- /NEWS -->
   {{ end }}
 
