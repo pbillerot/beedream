@@ -18,8 +18,8 @@
 {{ if .Parent.Params}}
 {{$size = index .Parent.Params "taille"}}
 {{end}}
-{{$size := .Get "taille" | default $size }}
-<div {{if and $img $pdf}}class="card bee-modal-image  bee-card-{{$size}}" data-img="{{$img}}" data-pdf="{{$pdf}}"{{else if $url}}class="card bee-window-open bee-card-{{$size}}" data-path="{{$url}}"{{else if $img}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$img}}"{{else}}class="card bee-card-{{$size}}"{{end}}>
+{{$size = .Get "taille" | default $size }}
+<div {{if and $img $pdf}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$img}}" data-pdf="{{$pdf}}"{{else if $url}}class="card bee-window-open bee-card-{{$size}}" data-path="{{$url}}"{{else if $img}}class="card bee-card-{{$size}}" data-img="{{$img}}"{{else}}class="card bee-card-{{$size}}"{{end}}>
     {{ if $img }}
     <div class="image">
         <img src="{{$img}}">
@@ -28,11 +28,11 @@
     {{ if $title }}
     <div class="content">
         <div class="{{if eq $inner ``}}center aligned {{end}}header">{{ $title }}</div>
-        {{end}}
         {{ if gt (len $inner) 0 }}
         <div class="description">{{ $inner }}</div>
         {{end}}
     </div>
+    {{end}}
     {{ if $pdf }}
     <div class="ui bottom attached button bee-window-open" data-path="{{ $pdf }}">
         <i class="file pdf icon"></i>
