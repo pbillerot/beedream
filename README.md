@@ -9,10 +9,11 @@ git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install
 ```
+
 ## Installation du thème
 - git submodule add git@github.com:pbillerot/beedream.git themes/beedream
 - git submodule Init
-- git submodule update
+- git submodule update --remote
 
 ## Aide sur Markdown
 - https://guides.github.com/features/mastering-markdown/
@@ -21,7 +22,7 @@ go install
 
 ## Fichiers personnaisés
 
-theme/dreamexpo  :smile: 
+theme/beedream  :smile: 
 - /data
   - fr.toml (date format french)
 - /i18n
