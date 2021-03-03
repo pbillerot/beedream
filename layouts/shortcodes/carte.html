@@ -9,6 +9,7 @@
 -->
 {{$title := .Get "titre" | default ""}}
 {{$texte := .Get "texte" | default ""}}
+{{$diapo := .Get "diapo" | default ""}}
 {{$img := .Get "image" | default ""}}
 {{$url := .Get "lien" | default ""}}
 {{$pdf := .Get "pdf" | default ""}}
@@ -19,10 +20,15 @@
 {{$size = index .Parent.Params "taille"}}
 {{end}}
 {{$size = .Get "taille" | default $size }}
-<div {{if and $img $pdf}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$img}}" data-pdf="{{$pdf}}"{{else if $url}}class="card bee-window-open bee-card-{{$size}}" data-path="{{$url}}"{{else if $img}}class="card bee-card-{{$size}}" data-img="{{$img}}"{{else}}class="card bee-card-{{$size}}"{{end}}>
+<div {{if and $img $pdf}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$img}}" data-pdf="{{$pdf}}"{{else if $url}}class="card bee-window-open bee-card-{{$size}}" data-path="{{$url}}"{{else if $img}}class="card bee-card-{{$size}}" data-img="{{$img}}"{{else if $diapo}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$diapo}}"{{else}}class="card bee-card-{{$size}}"{{end}}>
     {{ if $img }}
     <div class="image">
         <img src="{{$img}}">
+    </div>
+    {{end}}
+    {{ if $diapo }}
+    <div class="image">
+        <img src="{{$diapo}}">
     </div>
     {{end}}
     {{ if $title }}
