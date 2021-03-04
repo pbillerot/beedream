@@ -10,9 +10,17 @@ cd hugo
 go install
 ```
 
-## Installation du thème
+## Installation de beedream-doc
+- git clone git@github.com:pbillerot/beedream-doc.git
+- git submodule init
+- git submodule update --remote
+
+## Installation du thème sur un site existant
 - git submodule add git@github.com:pbillerot/beedream.git themes/beedream
-- git submodule Init
+- git submodule init
+- git submodule update --remote
+
+## Mise à jour du thème sur un site existant
 - git submodule update --remote
 
 ## Aide sur Markdown
