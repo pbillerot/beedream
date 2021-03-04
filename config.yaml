@@ -1,5 +1,5 @@
 #
-# Personnalisation du Site
+# Configuration par défaut lié au thème
 # à redéfinir dans /data/config.yaml
 #
 title: "TITRE DU SITE"
@@ -14,3 +14,8 @@ favicon: "/img/hugoSM.png"
 # l'image d'arrière
 backgroundImage: "/img/hugo-background.jpg"
 
+# Liens barre de navigation en haut
+params:
+  help: "https://beedream.billerot.eu/"
+  github: "https://github.com/pbillerot/beedream"
+  hugo: "https://gohugo.io/"
