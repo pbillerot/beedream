@@ -1,21 +1,59 @@
 #
 # Configuration par défaut lié au thème
-# à redéfinir dans /data/config.yaml
+# à personnaliser dans /data/config.yaml
 #
+
+# TITRE
 title: "TITRE DU SITE"
 subtitle: "Sous-titre du site"
-
 # l'image arrondie
 avatar: "/img/hugo.png"
-
 # l'icône dans l'onglet du navigateur
 favicon: "/img/hugoSM.png"
-
 # l'image d'arrière
 backgroundImage: "/img/hugo-background.jpg"
 
-# Liens barre de navigation en haut
+theme: "beedream"
+
+baseURL: "/"
+languageCode: "fr-FR"
+defaultContentLanguage: "fr"
+
+
+RelativeURLs: true
+CanonifyURLs: true
+
 params:
+  background: "grey"
+  linkColor: "seagreen"
+  rss: true
+
+  email: "philippe.billerot@gmail.com"
+  siteStartYear: 2021
+  version: 21.2.20
+
+  enableGitInfo: true
+
+  # Url du site pour éditer les pages directement
+  # Utilisation href="{{printf .Site.Params.HugoServerAdmin .Page.path}}"
+  HugoServerAdmin: "http://localhost:8080/victor/document/%s"
+  
+  enableRobotsTXT: true
+
+  advanced:
+    customCSS:
+    - "css/custom.css"
+    customJS:
+
+  # Liens barre de navigation en haut
   help: "https://beedream.billerot.eu/"
   github: "https://github.com/pbillerot/beedream"
   hugo: "https://gohugo.io/"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: friendly # monokai dracula friendly
+
