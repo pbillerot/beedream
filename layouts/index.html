@@ -2,9 +2,6 @@
 {{ if gt (len .Content) 1 }}
 <!-- HOME -->
 <div class="ui centered relaxed grid dream-grid">
-    <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
-        {{ partial "header.html" . }}
-    </div>
     <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single {{.Params.Style}}" 
     id="dream-save-post-as-img">
         <section class="ui top attached segment">
@@ -54,6 +51,9 @@
         </footer>
         {{ end }}
 
+    </div>
+    <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+        {{ partial "header.html" . }}
     </div>
 </div>
 <!-- /HOME -->

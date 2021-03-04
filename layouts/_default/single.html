@@ -1,10 +1,5 @@
 {{ define "main" }}
 <div class="ui centered relaxed grid dream-grid">
-    {{ if .Site.Menus }}
-    <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
-        {{ partial "header.html" . }}
-    </div>
-    {{end}}
     <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single {{.Params.Style}}" 
     id="dream-save-post-as-img">
         <section class="ui top attached segment">
@@ -55,11 +50,9 @@
         {{ end }}
 
     </div>
-    {{ if not .Site.Menus }}
     <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
         {{ partial "header.html" . }}
     </div>
-    {{end}}
 </div>
 {{ end }}
 
