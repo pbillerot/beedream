@@ -7,6 +7,13 @@
 # Thème utilisé 
 theme: "beedream"
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: friendly # monokai dracula friendly
+
 # Optionnel car redéfinissable dans /data/config.yaml
 # TITRE
 title: "TITRE DU SITE"
@@ -17,3 +24,4 @@ avatar: "/img/hugo.png"
 favicon: "/img/hugoSM.png"
 # l'image d'arrière
 backgroundImage: "/img/hugo-background.jpg"
+
