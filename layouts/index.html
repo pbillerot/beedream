@@ -2,6 +2,9 @@
 {{ if gt (len .Content) 1 }}
 <!-- HOME -->
 <div class="ui centered relaxed grid dream-grid">
+    <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+        {{ partial "header.html" . }}
+    </div>
     <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single {{.Params.Style}}" 
     id="dream-save-post-as-img">
         <section class="ui top attached segment">
@@ -52,9 +55,6 @@
         {{ end }}
 
     </div>
-    <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
-        {{ partial "header.html" . }}
-    </div>
 </div>
 <!-- /HOME -->
 {{else}}
@@ -64,8 +64,6 @@
         class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column dream-column">
         {{ partial "header.html" . }}
     </div>
-
-    <!-- For backward compatible, it's needed to filter out the about pages to prevent them from being rendered -->
     {{ $paginator := .Paginate .Site.RegularPages 30}}
     {{ range $paginator.Pages }}
     {{ if not (in .Params.categories "links") }}
