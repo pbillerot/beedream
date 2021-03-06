@@ -30,7 +30,7 @@ params:
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: 21.2.20
+  version: 21.3.6
 
   enableGitInfo: true
 
