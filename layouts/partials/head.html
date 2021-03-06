@@ -1,7 +1,7 @@
 {{ if eq hugo.Environment "production" }}
-<link href="{{ .Site.Data.config.favicon }}" rel="shortcut icon" type="image/x-icon" />
+<link href="{{ .Site.Params.favicon }}" rel="shortcut icon" type="image/x-icon" />
 {{else}}
-<link href="{{ .Site.Data.config.faviconDev }}" rel="shortcut icon" type="image/x-icon" />
+<link href="{{ .Site.Params.faviconDev }}" rel="shortcut icon" type="image/x-icon" />
 {{end}}
 {{ if eq .Type "posts" }}
 <!-- Page Author & Description -->
@@ -15,12 +15,12 @@
 
 <!-- Add to homescreen for Chrome on Android -->
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" sizes="192x192" href="{{ .Site.Data.config.favicon }}">
+<link rel="icon" sizes="192x192" href="{{ .Site.Params.favicon }}">
 <!-- Add to homescreen for Safari on iOS -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="{{.Site.Data.config.title}}">
-<link rel="apple-touch-icon-precomposed" href="{{ .Site.Data.config.favicon }}">
+<meta name="apple-mobile-web-app-title" content="{{.Site.Params.title}}">
+<link rel="apple-touch-icon-precomposed" href="{{ .Site.Params.favicon }}">
 
 <!-- Site Generator -->
 {{ hugo.Generator }}
@@ -65,17 +65,17 @@
   }
   {{ end }}
 
-  {{ if or .Site.Params.background .Site.Data.config.backgroundImage }}
+  {{ if or .Site.Params.background .Site.Params.backgroundImage }}
   body {
     {{ if .Site.Params.background }}
     background-color: {{ .Site.Params.background }};
     {{ end }}
 
-    {{ if .Site.Data.config.backgroundImage }}
+    {{ if .Site.Params.backgroundImage }}
     {{if eq hugo.Environment "production" "development" }}
-    background-image: url('{{ .Site.Data.config.backgroundImage}}');
+    background-image: url('{{ .Site.Params.backgroundImage}}');
     {{else}}
-    background-image: url('/{{hugo.Environment}}{{ .Site.Data.config.backgroundImage}}');
+    background-image: url('/{{hugo.Environment}}{{ .Site.Params.backgroundImage}}');
     {{end}}
     {{ end }}
   }

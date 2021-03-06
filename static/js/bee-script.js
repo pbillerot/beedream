@@ -264,5 +264,8 @@ $(document).ready(function () {
      * SEMANTIC
      */
     $('.ui.accordion').accordion();
-    
+    $('#about').popup({
+        hoverable  : true,
+      })
+    ;
 });

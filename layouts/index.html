@@ -85,7 +85,7 @@
 {{ end }}
 
 {{ define "js" }}
-{{if eq .Site.Data.config.typeSite "documentation" }}
+{{if eq .Site.Params.typeSite "documentation" }}
 <script src="{{ `/js/html2canvas.min.js` | relURL }}"></script>
 <script src="{{ `/js/post.js` | relURL }}"></script>
 <!-- Load PhotoSwipe js if the load-photoswipe shortcode has been used -->

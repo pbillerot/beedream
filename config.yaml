@@ -45,10 +45,11 @@ params:
     - "css/custom.css"
     customJS:
 
-  # Liens barre de navigation en haut
+  # Url
   help: "https://beedream.billerot.eu/"
   github: "https://github.com/pbillerot/beedream"
   hugo: "https://gohugo.io/"
+  victor: "https://github.com/pbillerot/victor"
 
 markup:
   goldmark:

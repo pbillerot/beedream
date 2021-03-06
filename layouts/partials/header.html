@@ -2,17 +2,17 @@
   <!-- TITRE -->
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
-      {{ if isset .Site.Data.config "avatar" }}
+      {{ if .Site.Params.avatar }}
       <a href="{{ .Site.BaseURL }}">
-        <img src="{{ .Site.Data.config.avatar | relURL }}">
+        <img src="{{ .Site.Params.avatar | relURL }}">
       </a>
       {{ end }}
     </div>
 
     <h1 class="ui medium header">
-      {{- .Site.Data.config.title -}}
-      {{ if .Site.Data.config.subtitle }}
-      <div class="sub header" style="margin-top: 0.5rem;">{{ .Site.Data.config.subtitle }}</div>{{end}}
+      {{- .Site.Params.title -}}
+      {{ if .Site.Params.subtitle }}
+      <div class="sub header" style="margin-top: 0.5rem;">{{ .Site.Params.subtitle }}</div>{{end}}
     </h1>
 
     <!-- <div class="ui horizontal list">
@@ -71,85 +71,69 @@
   <!-- /NEWS -->
   {{ end }}
 
-  {{ if or .Site.Menus .Site.Taxonomies.categories}}
-  <section class="ui bottom attached segment dream-categories" style="background-color: #e8e8e8;">
-  {{ if .Site.Menus }}
-  <!-- MENU -->
-    <div class="ui vertical accordion menu">
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-      <div class="item">
-        {{ if .HasChildren }}
-        <div class="{{ if or ($.HasMenuCurrent `main` .) false }}active{{ end }} title">
-          <i class="dropdown icon"></i>
-          <span>{{ .Name }}</span>
-        </div>
-        <div class="{{ if or ($.HasMenuCurrent `main` .) false }}active{{ end }} content">
-          <div class="menu">
-          {{ range .Children }}
-          <a class="item {{ if $.IsMenuCurrent `main` . }}active{{ end }}"
-          href="{{ .URL }}">{{ .Name }}</a>
-          {{ end }}
-          </div>
-        </div>
-        {{ else }} 
-        <!-- no children -->
-        <a class="{{ if $.IsMenuCurrent `main` . }}active{{ end }} title" 
-          href="{{ .URL }}">{{ .Title }}</a>
-        {{ end }}
-      </div> <!-- end item -->
-      {{ end }}<!-- end range menu-->
+<section class="ui bottom attached segment dream-categories" style="background-color: #e8e8e8;">
+{{ if .Site.Menus }}
+  <!-- MENU MAIN -->
+  {{ $isMainClose := true }}
+  {{ range .Site.Menus.main }}
+  {{ if $isMainClose }}
+  <div class="ui vertical accordion menu">
+    {{$isMainClose = false}}
+  {{end}}
+  <div class="item">
+    {{ if .HasChildren }}
+    <div class="{{ if or ($.HasMenuCurrent `main` .) false }}active{{ end }} title">
+      <i class="dropdown icon"></i>
+      <span>{{ .Name }}</span>
     </div>
-  <!-- /MENU -->
-  {{ end}}
-
-  {{ if .Site.Taxonomies.categories }}
-  <!-- LINKS -->
-    {{ $categories := .Site.Taxonomies.categories }}
-    {{ range $name, $taxonomy := $categories }}
-    {{ if (eq $name "links") }}
+    <div class="{{ if or ($.HasMenuCurrent `main` .) false }}active{{ end }} content">
+      <div class="menu">
+      {{ range .Children }}
+      <a class="item {{ if $.IsMenuCurrent `main` . }}active{{ end }}"
+      href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+      </div>
+    </div>
+    {{ else }} 
+    <!-- no children -->
+    <a class="{{ if $.IsMenuCurrent `main` . }}active{{ end }} title" 
+      href="{{ .URL }}">{{ .Title }}</a>
+    {{ end }}
+  </div> <!-- end item -->
+  {{ end }}<!-- end range menu-->
+  {{ if not $isMainClose }}
+  </div>
+  {{end}}
+  <!-- /MENU MAIN-->
+  <!-- MENU LINKS -->
+  {{ $isLinksClose := true }}
+  {{ range .Site.Menus.links }}
+  {{ if $isLinksClose }}
+  <div class="content">
+    <div class="ui list">
+      {{$isLinksClose = false}}
+  {{end}}
+  <div class="item">
     <div class="content">
-      <div class="ui list">
-        {{ range $taxonomy.Pages }}
-        <div class="item">
-          <div class="content">
-            <a href="{{ .RelPermalink }}" class="item" style="color: rgba(0,0,0,.6) !important;">{{ .LinkTitle }}</a>
-          </div>
-        </div>
-        {{ end }}
-      </div><!-- /list-->
-    </div><!-- /content-->
-    {{ end }}
-    {{ end }}
-    <!-- links dans config -->
-    {{ if isset .Site.Data.config "links" }}
-    {{ $links := .Site.Data.config.links }}
-    <div class="content">
-      <div class="ui list">
-        {{ range $index, $link := $links }}
-        <div class="item">
-          <div class="content">
-            {{ $link }}
-          </div>
-        </div>
-        {{ end }}
-      </div><!-- /list-->
-    </div><!-- /content-->
-    {{ end }}
-  <!-- /LINKS -->
-  {{ end }}
-  </section>
-  {{ end }}
-  <!-- /menu /categories-->
+      <a href="{{ .URL }}" class="item {{ if $.IsMenuCurrent `links` . }}active{{ end }}" 
+      style="color: rgba(0,0,0,.6) !important;">{{ .Name }}</a>
+    </div>
+  </div>
+  {{ end }}<!-- end range menu-->
+  {{ if not $isLinksClose }}
+    </div><!-- /list-->
+  </div><!-- /content-->
+  {{end}}
+  <!-- /MENU LINKS -->
+{{ end}}
+<!-- about -->
+<div class="ui bottom right attached label">
+  <div id="about" class="ui icon"
+  data-html="<p>Generated by <a href='{{ .Site.Params.hugo }}' target='_blank'>Hugo</a><span> with theme <a href='{{ .Site.Params.github }}' target='_blank'>Beedream</a><span>, edited by <a href='{{ .Site.Params.victor }}' target='_blank'>Victor</a><span></p>"
+    data-variation="basic">
+    <i class="circle info blue icon"></i>
+  </div>
+</div>
+</section>
 
-  <!-- <section class="ui grey inverted bottom attached center aligned segment">
-    {{ if .Site.Params.siteStartYear }}
-      <p>© {{ if eq now.Year .Site.Params.siteStartYear }}{{ now.Year }}{{ else }}{{ .Site.Params.siteStartYear }} - {{ now.Year }}{{ end }} {{ .Site.Data.config.title }}</p>
-    {{ else }}
-      <p>© {{ now.Year }} {{ .Site.Data.config.title }}</p>
-    {{ end }}
-    {{ if .Site.Params.headerBottomText }}
-      <p>{{ .Site.Params.headerBottomText | safeHTML }}</p>
-    {{ end }}
-  </section> -->
 </article>
