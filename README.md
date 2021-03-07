@@ -43,7 +43,7 @@ Démarrer votre navigateur avec l'adresse
     git submodule update --remote
 
 ## Installation du thème sur un site existant
-    git submodule add git@github.com:pbillerot/beedream.git themes/beedream
+    git submodule add https://github.com/pbillerot/beedream.git themes/beedream
     git submodule init
     git submodule update --remote
 

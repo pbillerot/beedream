@@ -15,7 +15,7 @@ params:
   title: "TITRE DU SITE"
   subtitle: "Sous-titre du site"
   # l'image arrondie
-  avatar: "/img/avatar.png"
+  avatar: "/img/bee.svg"
   # l'icône dans l'onglet du navigateur
   favicon: "/img/hugoSM.png"
   # l'image d'arrière
