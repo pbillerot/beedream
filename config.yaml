@@ -4,26 +4,23 @@
 #
 
 # TITRE
-title: "TITRE DU SITE"
-subtitle: "Sous-titre du site"
-# l'image arrondie
-avatar: "/img/hugo.png"
-# l'icône dans l'onglet du navigateur
-favicon: "/img/hugoSM.png"
-# l'image d'arrière
-backgroundImage: "/img/hugo-background.jpg"
-
-theme: "beedream"
-
 baseURL: "/"
 languageCode: "fr-FR"
 defaultContentLanguage: "fr"
-
 
 RelativeURLs: true
 CanonifyURLs: true
 
 params:
+  title: "TITRE DU SITE"
+  subtitle: "Sous-titre du site"
+  # l'image arrondie
+  avatar: "/img/avatar.png"
+  # l'icône dans l'onglet du navigateur
+  favicon: "/img/hugoSM.png"
+  # l'image d'arrière
+  backgroundImage: "/img/hugo-background.jpg"
+
   background: "grey"
   linkColor: "seagreen"
   rss: true
@@ -34,7 +31,7 @@ params:
 
   enableGitInfo: true
 
-  # Url du site pour éditer les pages directement
+  # Url du site pour éditer les pages directement avec Victor
   # Utilisation href="{{printf .Site.Params.HugoServerAdmin .Page.path}}"
   HugoServerAdmin: "http://localhost:8080/victor/document/%s"
   

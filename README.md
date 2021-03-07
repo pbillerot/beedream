@@ -1,55 +1,51 @@
 # THEME HUGO - BEEDREAM
 
-https://gohugo.io/
+## Installation
+L'installation est décrite sur le site [gohugo.io](https://gohugo.io)
+- https://gohugo.io/getting-started/quick-start/
 
-## Installation de Hugo
-- https://gohugo.io/getting-started/installing/#fetch-from-github
+Résumé des commandes
+```shell
+# Sous DEBIAN 10
+# - Installation de Hugo
+sudo apt install hugo
+
+# Création du site "quickstart"
+hugo new site quickstart
+
+# - Installation du thème "beedream"
+cd quickstart
+git init
+git submodule add https://github.com/pbillerot/beedream.git themes/beedream
+# - Déclaration du thème
+# - éditer le fichier "config.toml"
+# - ajouter la ligne "theme beedream"
+echo 'theme = "beedream"' >> config.toml
 ```
-git clone https://github.com/gohugoio/hugo.git
-cd hugo
-go install
+
+## Créer un premier document
+```shell
+hugo new site/mon-premier-document.md
+# éditer le document pour changer l'état "draft:" à false
 ```
 
-## Installation de beedream-doc
-- git clone git@github.com:pbillerot/beedream-doc.git
-- git submodule init
-- git submodule update --remote
+## Démarrage et Tests
+Comme précisé dans la documentation de Hugo
+```shell
+hugo server
+```
+Démarrer votre navigateur avec l'adresse
+- http://localhost:1313/
 
-## Installation du thème sur un site existant
-- git submodule add git@github.com:pbillerot/beedream.git themes/beedream
-- git submodule init
-- git submodule update --remote
+![](static/img/quickstart.png)
 
 ## Mise à jour du thème sur un site existant
-- git submodule update --remote
+    git submodule update --remote
 
-## Aide sur Markdown
-- https://guides.github.com/features/mastering-markdown/
-- https://www.webfx.com/tools/emoji-cheat-sheet/
-- https://www.markdownguide.org/basic-syntax/
+## Installation du thème sur un site existant
+    git submodule add git@github.com:pbillerot/beedream.git themes/beedream
+    git submodule init
+    git submodule update --remote
 
-## Fichiers personnaisés
-
-theme/beedream  :smile: 
-- /data
-  - fr.toml (date format french)
-- /i18n
-  - fr.toml (mot in french)
-- /layouts
-  - index.html définit main et js
-  - /categories
-    - terms.html (liste des catégories)
-  - /_default
-    - baseof.html
-    - list.html la page principale avec _header et summary
-    - single.html (template article)
-    - summary.html (template carte article)
-  - /partials
-    - header.html (template carte de navigation)
-    - nav.html (ligne de navigation home)
-  - /posts
-    - section.html (liste des archives)
-  - /tags
-    - terms.html (liste des tags)
-
+Changer `theme = "beedream"` dans `config.toml`
 
