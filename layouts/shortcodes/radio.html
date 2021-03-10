@@ -1,16 +1,18 @@
 <!-- 
-    Un player audio
+    Un player de flux en streaming
     param 0 : le chemin du fichier
-    param 1 : le titre du morceau
+    param 1 : le nom de la radio
+    https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
 -->
 {{$path := .Get 0 | default "/"}}
 {{$label := .Get 1 | default ""}}
 {{ $base := path.Base $path }}
 {{ $ext := (path.Ext $path) }}
 {{ $noext := strings.Replace $base $ext "" }}
-<div class="ui compact icon message bee-player" data-path="{{ $path }}">
+<div class="ui compact icon message bee-radio" data-path="{{ $path }}">
     <i class="file audio outline orange icon"></i>
     <div class="content">
         <p>{{if $label }}{{ $label }}{{ else }}{{ $noext }}{{ end }}</p>
+        <audio src="{{$path}}"></audio>
     </div>
 </div>

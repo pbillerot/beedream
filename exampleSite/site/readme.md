@@ -5,10 +5,11 @@ draft: false
 tags:
 - news
 - technique
-categories:
-- help # ne sera par affiché dans le sommaire
+# Ne sera par affiché dans le sommaire
+_build:
+   list: false
 
-cover: "/site/pexel.jpg"
+cover: "/site/media/readme.png"
 ---
 
 THEME HUGO - BEEDREAM

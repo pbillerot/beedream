@@ -105,7 +105,7 @@
   </div>
   {{end}}
   <!-- /MENU MAIN-->
-  <!-- MENU LINKS -->
+  <!-- MENU CARD -->
   {{ $isLinksClose := true }}
   {{ range .Site.Menus.card }}
   {{ if $isLinksClose }}
@@ -115,7 +115,7 @@
   {{end}}
   <div class="item">
     <div class="content">
-      <a href="{{ .URL }}" class="item {{ if $.IsMenuCurrent `card` . }}active{{ end }}" 
+      <a href="{{ .URL }}" {{if in .URL `http`}}target="_blank"{{end}} class="item {{ if $.IsMenuCurrent `card` . }}active{{ end }}" 
       style="color: rgba(0,0,0,.6) !important;">{{ .Name }}</a>
     </div>
   </div>

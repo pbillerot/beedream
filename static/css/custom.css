@@ -23,6 +23,7 @@ body, .ui.header {
     padding: 0.5em 1em;
 }
 .ui.icon.message.bee-player
+, .ui.icon.message.bee-radio
 , .ui.icon.message.bee-modal-image 
 , .ui.icon.message.bee-open 
 , .ui.icon.message.bee-window-open 
@@ -42,7 +43,6 @@ body, .ui.header {
 /* Carte */
 .ui.card>.content>.description, .ui.cards>.card>.content>.description {
     font-family: Lato;
-    font-size: 0.87em;
 }
 .ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
     font-family: Lato;

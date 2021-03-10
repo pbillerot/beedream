@@ -2,9 +2,10 @@
 title: Colonne
 draft: false 
 date: 2021-02-20 
-cover: /shortcode/shortcode.svg
-tags:
-- shortcode
+cover: /site/media/shortcode.svg
+# Ne sera par affiché dans le sommaire
+_build:
+   list: false
 menu: 
   main:
     parent: shortcode

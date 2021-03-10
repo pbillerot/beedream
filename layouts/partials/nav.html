@@ -4,9 +4,18 @@
     </a>
     <!-- MENU NAVIGATION -->
     {{ range .Site.Menus.navigation }}
-    <a class="item bee-admin" href="{{ .URL }}" style="color: black !important;" target="_blank">
+    <a class="item bee-admin" href="{{ .URL }}" style="color: black !important;" {{if in .URL `http`}}target="_blank"
+        {{end}}>
         <i class="large {{ .Pre }} icon" title="{{ .Name }}"></i>
     </a>
-    {{ end }}<!-- end range menu-->
+    {{ end }}
+    <!-- end range menu-->
     <!-- /MENU NAVIGATION -->
+    {{ if .Site.Params.enableSearch }}
+    <div class="right menu">
+        <div class="item">
+            <i class="large link search icon" onclick="toggleSearch()"></i>
+        </div>
+    </div>
+    {{ end }}
 </nav>

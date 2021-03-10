@@ -244,6 +244,117 @@ $(document).ready(function () {
         },
     } // end $player
 
+    $('.bee-radio').on('click', function (event) {
+        $radio.click($(this));
+        event.preventDefault();
+    });
+    var $radio = {
+        audioElement: null,
+        selector: null,
+        path: null,
+        isSourceLoaded: false,
+        getPath: function (selector) {
+            $path = selector.data('path')
+            if ($path.indexOf("http") > -1) {
+                return $path;
+            } else if (window.location.pathname.indexOf("hugo/") > -1) {
+                return "/hugo" + $path;
+            }
+            return $path;
+        },
+        init: function (selector) {
+            this.selector = selector;
+            this.path = this.getPath(selector);
+            if ( ! this.isSourceLoaded ) {
+                this.loadSource();
+            }
+        },
+        loadSource: function () {
+            // console.log(this.path, 'source loading...');
+            if (this.audioElement)  {
+                this.audioElement.src = this.path;
+                this.audioElement.load();
+            } else {
+                this.audioElement = new Audio(this.path);
+            }
+            this.isSourceLoaded = true;
+        },
+        play: function () {
+            if (this.isSourceLoaded) {
+                this.audioElement.play();
+            }
+            this.uiPlay();
+        },
+        pause: function () {
+            this.audioElement.pause();
+            this.uiPause();
+        },
+        stop: function () {
+            if (this.isSourceLoaded) {
+                this.audioElement.pause();
+            }
+            this.uiInit();
+        },
+        uiWait: function () {
+            // notched circle loading
+            this.uiInit();
+            this.selector.children('i').removeClass('file audio outline orange');
+            this.selector.children('i').addClass('notched circle loading');
+            this.selector.addClass('warning');
+        },
+        uiPause: function () {
+            this.uiInit();
+            this.selector.children('i').removeClass('play file audio outline orange');
+            this.selector.children('i').addClass('play');
+            this.selector.addClass('success');
+        },
+        uiPlay: function () {
+            this.uiInit();
+            this.selector.children('i').removeClass('play file audio outline orange');
+            this.selector.children('i').addClass('pause');
+            this.selector.addClass('error');
+        },
+        uiInit: function () {
+            $('.bee-radio').each(function () {
+                $(this).removeClass('success error warning');
+                $(this).children('i').removeClass('pause play notched circle loading');
+                $(this).children('i').addClass('file audio outline orange');
+            })
+        },
+        isPlaying: function () {
+            if (this.audioElement.paused) {
+                return false
+            } else {
+                return true
+            }
+        },
+        click: function (selector) {
+            if (this.getPath(selector) == this.path) {
+                // clic sur le player en cours
+                if (!this.isSourceLoaded) {
+                    return
+                }
+                // Pause ou Start du player
+                if (this.isPlaying()) {
+                    this.pause();
+                } else {
+                    this.play();
+                }
+            } else {
+                // clic sur un nouveau player
+                // arrêt du player en cours
+                if (this.isSourceLoaded) {
+                    // this.stop();
+                }
+                this.isSourceLoaded = false;
+                // démarrage d'un nouveau player
+                this.init(selector);
+                this.play();
+            } // end if CurrentPlayer
+        },
+    } // end $player
+
+
     /**
      * Appel Masonry pour afficher les galeries
      * https://masonry.desandro.com/

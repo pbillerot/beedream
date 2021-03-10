@@ -1,11 +1,10 @@
 ---
-title: Syntaxe Markdown
+title: Markdown
 draft: false 
 date: 2021-02-23
 tags:
 - markdown
-cover: /markdown/markdown.jpg
-#cover: /markdown/markdown-embed.png
+cover: /site/media/markdown.jpg
 menu:
   main:
     weight: 2
@@ -229,7 +228,7 @@ Saut de citation.
 > Il s'agit d'une très longue ligne qui sera toujours citée correctement lorsqu'elle se terminera. Oh mon garçon, continuons à écrire pour nous assurer que cela est assez long pour que tout le monde puisse en profiter. Oh, vous pouvez mettre de code **Markdown** dans un bloc de citation.
 ```
 <--->
->Les bloc de citation sont très pratiques dans les e-mails pour émuler le texte de réponse. Cette ligne fait partie du même devis.
+>Les bloc de citation sont très pratiques dans les e-mails pour émuler le texte de réponse. Cette ligne fait partie du même bloc.
 
 Saut de citation.
 

@@ -37,6 +37,8 @@ params:
   
   enableRobotsTXT: true
 
+  enableSearch: true
+
   advanced:
     customCSS:
     - "css/custom.css"
@@ -47,6 +49,9 @@ params:
   github: "https://github.com/pbillerot/beedream"
   hugo: "https://gohugo.io/"
   victor: "https://github.com/pbillerot/victor"
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]
 
 markup:
   goldmark:

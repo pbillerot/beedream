@@ -66,14 +66,10 @@
     </div>
     {{ $paginator := .Paginate .Site.RegularPages 30}}
     {{ range $paginator.Pages }}
-    {{ if not (in .Params.categories "links") }}
-    {{ if not (in .Params.categories "help") }}
     <div
         class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column dream-column">
         {{ .Render "summary" }}
     </div>
-    {{ end }}
-    {{ end }}
     {{ end }}
     <div
         class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">

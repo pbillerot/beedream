@@ -25,10 +25,9 @@
                 {{if .Draft }}
                 <i class="firstdraft red icon" title="brouillon"></i>
                 {{end}}
-                {{if or .PublishDate .ExpiryDate }}
+                {{if .ExpiryDate }}
                 <div class="ui yellow image label bee-admin">
                     <i class="clock outline icon"></i>
-                    {{if .PublishDate}}<span title="date publication">{{.PublishDate.Format "2006-01-02"}}</span>{{end}}
                     {{if .ExpiryDate}}
                     <div class="detail" title="date expiration">{{.ExpiryDate.Format "2006-01-02"}}</div>
                     {{end}}
