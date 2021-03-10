@@ -23,8 +23,8 @@ menu:
 
 ## Exemple
 
-Le **Lorem Ipsum** est simplement du faux texte employé dans la composition et la mise en page avant impression.
+Le **Lorem Ipsum** est simplement du faux {{< icone bell >}} texte employé dans la composition et la mise en page avant impression.
 
 ```go-html-template
-{{</* icone bell */>}} Le **Lorem Ipsum** est simplement du faux texte employé dans la composition et la mise en page avant impression.
+Le **Lorem Ipsum** est simplement du faux {{</* icone bell */>}} texte employé dans la composition et la mise en page avant impression.
 ```

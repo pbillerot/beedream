@@ -48,16 +48,16 @@ body, .ui.header {
     font-family: Lato;
     font-size: 1em;
 }
-.ui.cards>.bee-card-petite, .bee-card-petite {
+.ui.cards>.bee-card-mini, .bee-card-mini {
     width: 160px;
 }
-.ui.cards>.bee-card-moyenne, .bee-card-moyenne {
+.ui.cards>.bee-card-petite, .bee-card-petite {
     width: 274px;
 }
-.ui.cards>.bee-card-grande, .bee-card-grande {
+.ui.cards>.bee-card-moyenne, .bee-card-moyenne {
     width: 450px;
 }
-.ui.cards>.bee-card-large, .bee-card-large {
+.ui.cards>.bee-card-grande, .bee-card-grande {
     width: 740px;
 }
 

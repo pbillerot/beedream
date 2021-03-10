@@ -1,4 +1,8 @@
 <!-- 
     Texte
+    [tiny small medium large huge] mini petite moyenne grande
+    [red orange green teal blue purple violet brown grey]
 -->
-<span class="ui {{.Get 0}} {{.Get 1}} {{.Get 2}} header">{{- .Inner | markdownify -}}</span>
+{{ $size := dict "mini" "tiny" "petite" "small" "moyenne" "medium" "grande" "large" "large" "huge"}}
+{{ $color := dict "rouge" "red" "orange" "orange" "vert" "green" "cyan" "teal" "bleu" "blue" "pourpre" "purple" "violet" "violet" "marron" "brown" "gris" "grey"}}
+<span class="ui {{ index $size (.Get 0)}} {{ index $size (.Get 1)}} {{ index $color (.Get 0)}} {{ index $color (.Get 1)}} header">{{- .Inner | markdownify -}}</span>
