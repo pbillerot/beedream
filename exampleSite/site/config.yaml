@@ -1,1 +1,52 @@
-/mnt/sandisk/nas/volshare/beedemo/config/_default/config.yaml
+#
+# Configuration du site
+#
+
+# TITRE
+params:
+  title: "Beedream"
+  subtitle: "Pour bien démarrer"
+  # l'image arrondie
+  avatar: "/site/media/bee.svg"
+  # l'icône dans l'onglet du navigateur
+  favicon: "/site/media/bee.svg"
+  # l'image d'arrière plan
+  backgroundImage: "/site/media/ann-h.jpg"
+
+# Les menus que l'on peut ajouter
+# si l'url commence par http le lien sera ouvert dans un nouvel onglet
+menu:
+  # menu qui va apparaître en bas de la carte du sommaire
+  # le lien sera ouvert dans l'onglet courant
+  # à réserver pour des liens vers des pages du site
+  card: 
+  - name: "README"
+    url: "/site/readme"
+    weight: 10 # pour trier le menu
+  - name: "TODO"
+    url: "/site/todo"
+    weight: 20 # pour trier le menu
+
+  # menu liens en haut du site 
+  # le lien sera ouvert dans un autre onglet
+  navigation: # 
+  - name: "Documentation sur le thème BeeDream"
+    url: "https://beedream.billerot.eu/"
+    weight: 10
+    pre: "help" # nom de l'icône de la bibliothèque des icônes
+  - name: "Bibliothèque des icônes"
+    url: "https://fontawesome.com/icons?d=gallery&p=2&m=free"
+    weight: 20 # pour trier le menu
+    pre: "font awesome flag" # nom de l'icône de la bibliothèque des icônes
+  - name: "Documentation Hugo"
+    url: "https://gohugo.io/"
+    weight: 20 # pour trier le menu
+    pre: "hospital symbol" # nom de l'icône de la bibliothèque des icônes
+
+# Rendu du markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: friendly # monokai dracula friendly
