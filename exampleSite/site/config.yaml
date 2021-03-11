@@ -21,10 +21,10 @@ menu:
   # à réserver pour des liens vers des pages du site
   card: 
   - name: "README"
-    url: "/site/readme"
+    url: "/site/readme/"
     weight: 10 # pour trier le menu
   - name: "TODO"
-    url: "/site/todo"
+    url: "/site/todo/"
     weight: 20 # pour trier le menu
 
   # menu liens en haut du site 

@@ -7,5 +7,3 @@ cover: /site/media/beadream.png
 Installer et Utiliser Beedream
 <!--more-->
 
-{{$file := .Get 0}}
-{{ $file | readFile | markdownify }}

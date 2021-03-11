@@ -24,7 +24,11 @@ Le format de ce document est basé sur les recommandations de [Keep a Changelog]
 **Fixed** pour les corrections de bugs.  
 **Security** en cas de vulnérabilités.  
 
-> **La version majeur est [1.0.0] 2021-03-11**
+> **La version majeur est [1.0.1] 2021-03-11**
+
+[1.0.1] - 2021.03.11
+--------------------
+- fixed: Menu card - l'url doit se terminer par un /
 
 [1.0.0] - 2021.03.11
 --------------------
