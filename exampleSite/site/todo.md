@@ -2,14 +2,14 @@
 title: "TODO"
 date: 2021-03-08
 draft: false
-tags:
-- news
 # Ne sera par affiché dans le sommaire
 _build:
    list: false
 
 cover: "/site/media/todo.png"
 ---
+1. [x] taile xs s m l xl
+1. [x] Revoir la font du shortcode texte
 1. [ ] Revoir le readme
 1. [x] Player sur flux radio
 1. [x] single - date expiration seulement

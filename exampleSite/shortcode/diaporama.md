@@ -3,6 +3,8 @@ title: Diaporama
 draft: false 
 date: 2021-02-20 
 cover: /site/media/shortcode.svg
+tags:
+- shortcode
 # Ne sera par affiché dans le sommaire
 _build:
    list: false

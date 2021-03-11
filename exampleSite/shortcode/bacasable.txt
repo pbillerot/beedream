@@ -1,0 +1,1 @@
+    <span class="ui {{ index $size (.Get 0)}} {{ index $size (.Get 1)}} {{ index $color (.Get 0)}} {{ index $color (.Get 1)}} text">{{- .Inner | markdownify -}}</span>

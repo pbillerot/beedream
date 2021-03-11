@@ -11,7 +11,7 @@
 {{$pos := .Get "position" | default ""}}
 {{$legend := .Get "titre"}}
 {{$url := .Get "lien"}}
-{{if eq $size "mini"}}{{$size = "small"}}{{else if eq $size "petite"}}{{$size = "medium"}}{{else if eq $size "moyenne"}}{{$size = "large"}}{{else if eq $size "grande"}}{{$size = "big"}}{{end}}
+{{if eq $size "s"}}{{$size = "small"}}{{else if eq $size "m"}}{{$size = "medium"}}{{else if eq $size "l"}}{{$size = "large"}}{{else if eq $size "xl"}}{{$size = "big"}}{{end}}
 {{if eq $pos "gauche"}}{{$pos = "left floated"}}{{else if eq $pos "droite"}}{{$pos = "right floated"}}{{end}}
 <div class="ui compact {{ $pos }} segment" style="margin: 0; margin: 0 1em 0.5em 0; padding: 0">
         {{if $url}}

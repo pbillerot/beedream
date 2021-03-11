@@ -3,6 +3,6 @@
     [tiny small medium large huge] mini petite moyenne grande
     [red orange green teal blue purple violet brown grey]
 -->
-{{ $size := dict "mini" "tiny" "petite" "small" "moyenne" "medium" "grande" "large" "large" "huge"}}
+{{ $size := dict "xs" "tiny" "s" "small" "m" "medium" "l" "large" "xl" "huge"}}
 {{ $color := dict "rouge" "red" "orange" "orange" "vert" "green" "cyan" "teal" "bleu" "blue" "pourpre" "purple" "violet" "violet" "marron" "brown" "gris" "grey"}}
-<span class="ui {{ index $size (.Get 0)}} {{ index $size (.Get 1)}} {{ index $color (.Get 0)}} {{ index $color (.Get 1)}} header">{{- .Inner | markdownify -}}</span>
+<span class="ui {{ index $size (.Get 0)}} {{ index $size (.Get 1)}} {{ index $color (.Get 0)}} {{ index $color (.Get 1)}} text">{{- .Inner | markdownify -}}</span>

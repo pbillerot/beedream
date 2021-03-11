@@ -11,7 +11,7 @@
     {{ partial "header.html" . }}
   </div>
 
-  {{ $paginator := .Paginate .Pages }}
+  {{ $paginator := .Paginate .Pages 30 }}
   {{ range $paginator.Pages}}
   <div
     class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
