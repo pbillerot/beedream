@@ -8,8 +8,9 @@ _build:
 
 cover: "/site/media/todo.png"
 ---
-1. [x] taile xs s m l xl
+1. [x] taille xs s m l xl
 1. [x] Revoir la font du shortcode texte
+1. [ ] menu card renommer en summary ou
 1. [ ] Revoir le readme
 1. [x] Player sur flux radio
 1. [x] single - date expiration seulement
