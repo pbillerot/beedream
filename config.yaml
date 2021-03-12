@@ -19,7 +19,7 @@ params:
   # l'icône dans l'onglet du navigateur
   favicon: "/img/hugoSM.png"
   # l'image d'arrière
-  backgroundImage: "/img/hugo-background.jpg"
+  backgroundImage: "/img/beedream.jpg"
 
   background: "grey"
   linkColor: "seagreen"
@@ -27,7 +27,7 @@ params:
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: "[1.0.1] 21.3.11"
+  version: "[1.0.2] 21.3.12"
 
   enableGitInfo: true
 

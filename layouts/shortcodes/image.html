@@ -15,12 +15,12 @@
 {{if eq $pos "gauche"}}{{$pos = "left floated"}}{{else if eq $pos "droite"}}{{$pos = "right floated"}}{{end}}
 <div class="ui compact {{ $pos }} segment" style="margin: 0; margin: 0 1em 0.5em 0; padding: 0">
         {{if $url}}
-        <a class="image" href="{{ $url }}" target="_blank">
-            <img class="ui {{$size}} image" src="{{ $src }}"></img>
+        <a class="image" href="{{ $url | relURL }}" target="_blank">
+            <img class="ui {{$size}} image" src="{{ $src | relURL }}"></img>
         </a>
         {{else}}
         <div class="image">
-            <img class="ui {{$size}} image" src="{{ $src }}"></img>
+            <img class="ui {{$size}} image" src="{{ $src | relURL }}"></img>
         </div>
         {{end}}
     {{if $legend}}

@@ -12,7 +12,7 @@
     <div class="ui compact message bee-open" data-path="{{ replace $path `.md` `` }}">
         <i class="green file alternate outline large icon"></i>{{ path.Base .Name }}
     </div>
-    {{ else if or (eq $ext ".jpg") (eq $ext ".jpeg") (eq $ext ".png") (eq $ext ".svg") }}
+    {{ else if or (eq $ext ".jpg") (eq $ext ".jpeg") (eq $ext ".png") (eq $ext ".svg") (eq $ext ".gif") }}
     <div class="ui compact message bee-modal-image" data-path="{{ $path }}">
         <img class="ui middle aligned mini image" src="{{ $path }}">
         <span>{{ path.Base .Name }}</span>
@@ -37,7 +37,7 @@
     <div class="ui compact message bee-window-open" data-path="{{ $path }}">
         <i class="file powerpoint outline blue large icon"></i>{{ path.Base .Name }}
     </div>
-    {{ else if or (eq $ext ".wav") (eq $ext ".mp3") (eq $ext ".ogg")}}
+    {{ else if or (eq $ext ".wav") (eq $ext ".mp3") (eq $ext ".ogg") (eq $ext ".wma")}}
     <div class="ui compact message bee-modal-player" data-path="{{ $path }}" data-base="{{ path.Base .Name }}">
         <i class="file audio outline orange large icon"></i>{{ path.Base .Name }}
     </div>

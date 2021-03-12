@@ -22,14 +22,15 @@ L'installation est décrite sur le site [gohugo.io](https://gohugo.io)
 Résumé des commandes
 
     # Sous DEBIAN 10
-    # Installation de Hugo
-    sudo apt install hugo
+    # Installation de Hugo (actuellement version 0.77)
+    sudo apt install hugo    
 
 # Création du site "quickstart"
 
     hugo new site quickstart
 
 # Installation du thème "beedream"
+
     cd quickstart
     git init
     git submodule add https://github.com/pbillerot/beedream.git themes/beedream

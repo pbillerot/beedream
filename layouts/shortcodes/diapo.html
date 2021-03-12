@@ -12,9 +12,9 @@
 {{$url := .Get "lien"}}
 {{$pdf := .Get "pdf"}}
 {{if $url}}
-<a class="card raised" href="{{ $url }}" target="_blank">
+<a class="card raised" href="{{ $url | relURL }}" target="_blank">
     <div class="image">
-        <img src="{{ $src }}">
+        <img src="{{ $src | relURL }}">
     </div>
     {{if $legend}}
     <div class="content">
@@ -23,9 +23,9 @@
     {{end}}
 </a>
 {{else if $pdf}}
-<a class="card raised bee-modal-image" href="" data-pdf="{{ $pdf }}">
+<a class="card raised bee-modal-image" href="" data-pdf="{{ $pdf  | relURL}}">
     <div class="image">
-        <img src="{{ $src }}">
+        <img src="{{ $src | relURL }}">
     </div>
     {{if $legend}}
     <div class="content">
@@ -36,7 +36,7 @@
 {{else}}
 <div class="card raised">
     <div class="image">
-        <img src="{{ $src }}">
+        <img src="{{ $src | relURL }}">
     </div>
     {{if $legend}}
     <div class="content">

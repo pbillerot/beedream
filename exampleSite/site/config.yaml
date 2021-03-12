@@ -1,3 +1,4 @@
+---
 #
 # Configuration du site
 #
@@ -11,7 +12,7 @@ params:
   # l'icône dans l'onglet du navigateur
   favicon: "/site/media/bee.svg"
   # l'image d'arrière plan
-  backgroundImage: "/site/media/ann-h.jpg"
+  backgroundImage: "/site/media/beedream.jpg"
 
 # Les menus que l'on peut ajouter
 # si l'url commence par http le lien sera ouvert dans un nouvel onglet
@@ -50,3 +51,4 @@ markup:
       unsafe: true
   highlight:
     style: friendly # monokai dracula friendly
+---

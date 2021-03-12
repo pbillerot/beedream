@@ -2,12 +2,13 @@
  * Script.js
  */
 $(document).ready(function () {
+    // Calcul du path - ajout du path /hugo si le site est piloter par Victor
     function computePath(path) {
-        if (path.indexOf("http") > -1) {
-            return path;
-        } else if (window.location.pathname.indexOf("hugo/") > -1) {
-            return "/hugo" + path;
-        }
+        // if (path.indexOf("http") > -1) {
+        //     return path;
+        // } else if (window.location.pathname.indexOf("hugo/") > -1) {
+        //     return "/hugo" + path;
+        // }
         return path
     }
 
