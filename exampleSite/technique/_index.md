@@ -2,7 +2,7 @@
 title: Technique
 draft: false 
 menu: 
-  main:
+  page:
     identifier: technique
 ---
 

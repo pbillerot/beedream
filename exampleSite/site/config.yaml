@@ -20,7 +20,7 @@ menu:
   # menu qui va apparaître en bas de la carte du sommaire
   # le lien sera ouvert dans l'onglet courant
   # à réserver pour des liens vers des pages du site
-  card: 
+  links: 
   - name: "README"
     url: "/site/readme/"
     weight: 10 # pour trier le menu

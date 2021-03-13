@@ -7,7 +7,7 @@ tags:
 cover: "/site/media/menu.svg"
 
 menu:
-  main:
+  page:
     parent: technique
 ---
 <!--more-->

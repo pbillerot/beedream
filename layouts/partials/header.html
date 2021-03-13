@@ -75,28 +75,28 @@
 {{ if .Site.Menus }}
   <!-- MENU MAIN -->
   {{ $isMainClose := true }}
-  {{ range .Site.Menus.main }}
+  {{ range .Site.Menus.page }}
   {{ if $isMainClose }}
   <div class="ui vertical accordion menu">
     {{$isMainClose = false}}
   {{end}}
   <div class="item">
     {{ if .HasChildren }}
-    <div class="{{ if or ($.HasMenuCurrent `main` .) false }}active{{ end }} title">
+    <div class="{{ if or ($.HasMenuCurrent `page` .) false }}active{{ end }} title">
       <i class="dropdown icon"></i>
       <span>{{ .Name }}</span>
     </div>
-    <div class="{{ if or ($.HasMenuCurrent `main` .) false }}active{{ end }} content">
+    <div class="{{ if or ($.HasMenuCurrent `page` .) false }}active{{ end }} content">
       <div class="menu">
       {{ range .Children }}
-      <a class="item {{ if $.IsMenuCurrent `main` . }}active{{ end }}"
+      <a class="item {{ if $.IsMenuCurrent `page` . }}active{{ end }}"
       href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
       </div>
     </div>
     {{ else }} 
     <!-- no children -->
-    <a class="{{ if $.IsMenuCurrent `main` . }}active{{ end }} title" 
+    <a class="{{ if $.IsMenuCurrent `page` . }}active{{ end }} title" 
       href="{{ .URL }}">{{ .Title }}</a>
     {{ end }}
   </div> <!-- end item -->
@@ -107,7 +107,7 @@
   <!-- /MENU MAIN-->
   <!-- MENU CARD -->
   {{ $isLinksClose := true }}
-  {{ range .Site.Menus.card }}
+  {{ range .Site.Menus.links }}
   {{ if $isLinksClose }}
   <div class="content">
     <div class="ui list">
@@ -115,7 +115,7 @@
   {{end}}
   <div class="item">
     <div class="content">
-      <a href="{{ .URL }}" {{if in .URL `http`}}target="_blank"{{end}} class="item {{ if $.IsMenuCurrent `card` . }}active{{ end }}" 
+      <a href="{{ .URL }}" {{if in .URL `http`}}target="_blank"{{end}} class="item {{ if $.IsMenuCurrent `links` . }}active{{ end }}" 
       style="color: rgba(0,0,0,.6) !important;">{{ .Name }}</a>
     </div>
   </div>

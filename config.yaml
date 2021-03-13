@@ -27,11 +27,11 @@ params:
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: "[1.0.2] 21.3.12"
+  version: "[1.0.3] 21.3.13"
 
   enableGitInfo: true
 
-  # Url du site pour éditer les pages directement avec Victor
+  # Url du site pour éditer les pages directement avec Victor en local
   # Utilisation href="{{printf .Site.Params.HugoServerAdmin .Page.path}}"
   HugoServerAdmin: "http://localhost:8080/victor/document/%s"
   

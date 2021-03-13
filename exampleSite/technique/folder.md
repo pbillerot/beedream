@@ -1,5 +1,5 @@
 ---
-title: "Répertoire"
+title: "Organisation des Répertoires"
 date: 2021-03-08
 draft: false
 tags:
@@ -7,7 +7,7 @@ tags:
 cover: "/site/media/folder.svg"
 
 menu:
-  main:
+  page:
     parent: technique
 ---
 <!--more-->

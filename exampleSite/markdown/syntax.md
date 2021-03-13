@@ -6,7 +6,7 @@ tags:
 - markdown
 cover: /site/media/markdown.jpg
 menu:
-  main:
+  page:
     weight: 2
 ---
 Toutes les balises du Markdown pour présenter le contenu dans les pages.

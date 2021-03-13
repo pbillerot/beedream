@@ -9,7 +9,7 @@ tags:
 _build:
    list: false
 menu: 
-  main:
+  page:
     parent: shortcode
 ---
 ```go-html-template

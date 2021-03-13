@@ -12,19 +12,15 @@ _build:
 
 <!--more-->
 
-Retrouvez ci-après tous les changements documentés
+Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
-Le format de ce document est basé sur les recommandations de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et adhère à [Semantic Versioning](https://semver.org/lang/fr/).
+> **La version majeur est [1.0.3] 2021-03-13**
 
-###### Types de changements:
-`added` *pour les nouvelles fonctionnalités.*  
-`changed` *pour les changements aux fonctionnalités préexistantes.*  
-`deprecated` *pour les fonctionnalités qui seront bientôt supprimées*.  
-`removed` *pour les fonctionnalités désormais supprimées.*  
-`fixed` *pour les corrections de bugs.*  
-`security` *en cas de vulnérabilités.*  
+[1.0.3] - 2021.03.13
+--------------------
+- `changed` menu `main` renommer en `page`
+- `changed` menu `card` renommer en `links`
 
-> **La version majeur est [1.0.2] 2021-03-12**
 
 [1.0.2] - 2021.03.12
 --------------------
@@ -37,3 +33,17 @@ Le format de ce document est basé sur les recommandations de [Keep a Changelog]
 [1.0.0] - 2021.03.11
 --------------------
 - added: Intégration du guide directement dans le thème `exampleSite`
+
+
+<a name="reference"></a>
+Référence
+---------
+Le format de ce document est basé sur les recommandations de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et adhère à [Semantic Versioning](https://semver.org/lang/fr/).
+
+###### Types de changements:
+`added` *pour les nouvelles fonctionnalités.*  
+`changed` *pour les changements aux fonctionnalités préexistantes.*  
+`deprecated` *pour les fonctionnalités qui seront bientôt supprimées*.  
+`removed` *pour les fonctionnalités désormais supprimées.*  
+`fixed` *pour les corrections de bugs.*  
+`security` *en cas de vulnérabilités.*  

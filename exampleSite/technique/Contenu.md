@@ -8,7 +8,7 @@ tags:
 cover: "/site/media/contenu.jpg"
 
 menu:
-  main:
+  page:
     parent: technique
 ---
 <!--more-->

@@ -7,7 +7,7 @@ tags:
 cover: "/site/media/hebergement.jpg"
 
 menu:
-  main:
+  page:
     parent: technique
 ---
 <!--more-->

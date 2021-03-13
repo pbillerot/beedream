@@ -7,7 +7,7 @@ tags:
 cover: "/site/media/deploiement.png"
 
 menu:
-  main:
+  page:
     parent: technique
 ---
 <!--more-->

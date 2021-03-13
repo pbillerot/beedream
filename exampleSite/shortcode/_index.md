@@ -2,7 +2,7 @@
 title: Shortcodes
 draft: false 
 menu: 
-  main:
+  page:
     identifier: shortcode
     weight: 3
 ---
