@@ -8,7 +8,6 @@ _build:
 
 cover: "/site/media/todo.png"
 ---
-1. [ ] fixed: icône download non affiché sur sélection d'un fichier
 1. [ ] Revoir le readme
 1. [ ] Démarrer avec Beedream
    1. [ ] personnalisation de Beedream
@@ -20,17 +19,6 @@ cover: "/site/media/todo.png"
    1. [ ] docker nginx
    1. [ ] docker victor
 1. [ ] customm.css dans site.css
-1. [x] menu card renommer en summary ou
-1. [x] shortcode repertoire à documenter
-1. [x] galerie /hugo - à vérifier en prod
-1. [x] Installation Hugo
-1. [x] Installation Beedream
-1. [x] taille xs s m l xl
-1. [x] Revoir la font du shortcode texte
-1. [x] Moteur de recherche  
-   - https://codingnconcepts.com/hugo/client-side-search-engine-hugo/
-1. [x] Player sur flux radio
-1. [x] single - date expiration seulement
 
 <!--more-->
 

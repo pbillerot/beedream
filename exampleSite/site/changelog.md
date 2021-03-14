@@ -16,11 +16,14 @@ Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
 > **La version majeur est [1.0.3] 2021-03-13**
 
+[1.0.4] - 2021.03.14
+--------------------
+- `fixed` affichage de l'image `cover` qui ne gérait pas le chemin lié à l'environnement
+
 [1.0.3] - 2021.03.13
 --------------------
 - `changed` menu `main` renommer en `page`
 - `changed` menu `card` renommer en `links`
-
 
 [1.0.2] - 2021.03.12
 --------------------
