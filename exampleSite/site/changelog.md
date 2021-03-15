@@ -14,7 +14,11 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
-> **La version majeur est [1.0.3] 2021-03-13**
+> **La version majeur est [1.0.5] 2021-03-15**
+
+[1.0.5] - 2021.03.15
+--------------------
+- `fixed` débordement image plus grande que l'article
 
 [1.0.4] - 2021.03.14
 --------------------

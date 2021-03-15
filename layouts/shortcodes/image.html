@@ -13,7 +13,7 @@
 {{$url := .Get "lien"}}
 {{if eq $size "s"}}{{$size = "small"}}{{else if eq $size "m"}}{{$size = "medium"}}{{else if eq $size "l"}}{{$size = "large"}}{{else if eq $size "xl"}}{{$size = "big"}}{{end}}
 {{if eq $pos "gauche"}}{{$pos = "left floated"}}{{else if eq $pos "droite"}}{{$pos = "right floated"}}{{end}}
-<div class="ui compact {{ $pos }} segment" style="margin: 0; margin: 0 1em 0.5em 0; padding: 0">
+<div class="ui compact {{ $pos }} segment bee-segment-image">
         {{if $url}}
         <a class="image" href="{{ $url | relURL }}" target="_blank">
             <img class="ui {{$size}} image" src="{{ $src | relURL }}"></img>
