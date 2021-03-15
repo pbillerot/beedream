@@ -4,7 +4,7 @@ body, .ui.header {
     font-family: 'Jost', sans-serif;
 }
 
-article {
+article.main {
   overflow: auto;
 }
 .ui.bee-segment-image {
