@@ -14,9 +14,13 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
-> **La version majeur est [1.0.6] 2021-03-15**
+> **La version majeur est [1.0.6] 2021-03-16**
 
-[1.0.6] - 2021.03.15
+[1.0.7] - 2021.03.15
+--------------------
+- `fixed` suppression scrollbar horizontal sur article
+
+[1.0.6] - 2021.03.16
 --------------------
 - `fixed` suppression scrollbar sur card header
 

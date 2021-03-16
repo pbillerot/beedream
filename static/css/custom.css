@@ -5,7 +5,7 @@ body, .ui.header {
 }
 
 article.main {
-  overflow: auto;
+  overflow-x: hidden;
 }
 .ui.bee-segment-image {
   padding: 0;
