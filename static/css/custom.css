@@ -6,6 +6,7 @@ body, .ui.header {
 
 article.main {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 .ui.bee-segment-image {
   padding: 0;

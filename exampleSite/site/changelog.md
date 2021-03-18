@@ -14,7 +14,11 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
-> **La version majeur est [1.0.8] 2021-03-18**
+> **La version majeur est [1.0.9] 2021-03-18**
+
+[1.0.9] - 2021.03.18
+--------------------
+- `fixed` barre scroll verticale cachée désormais
 
 [1.0.8] - 2021.03.18
 --------------------
