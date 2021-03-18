@@ -14,7 +14,11 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
-> **La version majeur est [1.0.6] 2021-03-16**
+> **La version majeur est [1.0.8] 2021-03-18**
+
+[1.0.8] - 2021.03.18
+--------------------
+- `fixed` pointer sur player radio
 
 [1.0.7] - 2021.03.15
 --------------------
