@@ -14,7 +14,11 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
-> **La version majeur est [1.0.9] 2021-03-18**
+> **La version majeur est [1.0.10] 2021-03-18**
+
+[1.0.10] - 2021.03.18
+--------------------
+- `fixed` players non encadrés
 
 [1.0.9] - 2021.03.18
 --------------------
