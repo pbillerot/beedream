@@ -8,6 +8,7 @@ _build:
 
 cover: "/site/media/todo.png"
 ---
+1. [ ] shortcode player boucle
 1. [ ] Revoir le readme
 1. [ ] Démarrer avec Beedream
    1. [ ] personnalisation de Beedream

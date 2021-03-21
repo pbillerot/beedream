@@ -183,6 +183,8 @@ Style de référence:
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Titre Texte 2"
 {{< /colonnes >}}
 
+À noter que le [{{</* shortcode image... */>}}](/shortcode/image) peut remplacer cette balise avec des options supplémentaires : taille forme position
+
 ## Tables
 {{< colonnes two >}}
 ```tpl

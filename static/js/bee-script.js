@@ -212,7 +212,7 @@ $(document).ready(function () {
             this.selector.children('i').addClass('pause');
         },
         uiInit: function () {
-            $('.bee-player').each(function () {
+            $('.bee-player, .bee-radio').each(function () {
                 $(this).removeClass('success error warning');
                 $(this).children('i').removeClass('pause play notched circle loading');
                 $(this).children('i').addClass('file audio outline orange');
@@ -316,7 +316,7 @@ $(document).ready(function () {
             this.selector.addClass('error');
         },
         uiInit: function () {
-            $('.bee-radio').each(function () {
+            $('.bee-radio, .bee-player').each(function () {
                 $(this).removeClass('success error warning');
                 $(this).children('i').removeClass('pause play notched circle loading');
                 $(this).children('i').addClass('file audio outline orange');

@@ -17,7 +17,8 @@ menu:
 ```
 <!--more-->
 > Affichage des players correspondants aux morceaux de musique présents dans le `répertoire`  
-> Seuls les fichiers avec les extensions `.wav` `.ogg` `.mp3` seront proposés.
+> Seuls les fichiers avec les extensions `.wav` `.ogg` `.mp3` seront proposés.  
+> À noter que l'extension n'est pas affichée dans le titre.
 
 ## Exemple
 

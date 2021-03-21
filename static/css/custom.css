@@ -27,6 +27,7 @@ article.main {
     object-fit: contain;
 }
 
+/* message */
 .compact.message {
     margin: 0.5em;
     padding: 0.5em 1em;
@@ -69,6 +70,17 @@ article.main {
 .ui.cards>.bee-card-xl, .bee-card-xl {
     width: 740px;
 }
+
+/* image */
+.ui.circular.image, .ui.circular.image>*  {
+  border-radius: 50%;
+}
+/* img.ui.image {
+  margin: 0.5em;
+}
+img.ui.image:first-of-type {
+  margin-left: 0em;
+} */
 
 /* markdown */
 .markdown-body {

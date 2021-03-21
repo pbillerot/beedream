@@ -14,7 +14,13 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
-> **La version majeur est [1.0.10] 2021-03-18**
+> **La version majeur est [1.0.11] 2021-03-21**
+
+[1.0.11] - 2021.03.21
+--------------------
+- `changed` shortcode image - sans border margin et padding - `forme="ronde"`
+- `changed` shortcode player - paramétre `boucle`
+- `removed` shortcode radio - remplacé par `player` avec option `boucle`
 
 [1.0.10] - 2021.03.18
 --------------------

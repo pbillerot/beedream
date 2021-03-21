@@ -1,5 +1,5 @@
 ---
-title: Rive Gauche
+title: Rive Gauche à Paris
 draft: false 
 date: 2021-02-15 
 tags: 
@@ -8,7 +8,7 @@ _build:
   list: false
 
 # image de couverture dans le sommaire de la page
-cover: /site/media/chansons.jpg
+cover: /site/media/chanson.jpg
 style: bee-chanson
 ---
 > Alain Souchon - Au raz des pâquerettes - 1999

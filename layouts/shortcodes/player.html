@@ -5,12 +5,24 @@
 -->
 {{$path := .Get 0 | default "/"}}
 {{$label := .Get 1 | default ""}}
+{{$boucle := .Get 2 | default ""}}
+{{if eq $label "boucle" }}{{$label = $boucle}}{{$boucle = "boucle"}}{{end}}
 {{ $base := path.Base $path }}
 {{ $ext := (path.Ext $path) }}
 {{ $noext := strings.Replace $base $ext "" }}
+{{if eq $boucle "boucle"}}
 <div class="ui compact icon message bee-player" data-path="{{ $path }}">
     <i class="file audio outline orange icon"></i>
     <div class="content">
         <p>{{if $label }}{{ $label }}{{ else }}{{ $noext }}{{ end }}</p>
     </div>
 </div>
+{{else}}
+<div class="ui compact icon message bee-radio" data-path="{{ $path }}">
+    <i class="file audio outline orange icon"></i>
+    <div class="content">
+        <p>{{if $label }}{{ $label }}{{ else }}{{ $noext }}{{ end }}</p>
+        <audio src="{{$path}}"></audio>
+    </div>
+</div>
+{{end}}
