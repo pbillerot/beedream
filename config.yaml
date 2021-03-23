@@ -27,7 +27,7 @@ params:
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: "[1.0.9] 21.3.21"
+  version: "[1.0.12] 21.3.23"
 
   enableGitInfo: true
 
@@ -57,6 +57,10 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  tableOfContents:
+    endLevel: 3
+    ordered: true
+    startLevel: 2
   highlight:
     style: friendly # monokai dracula friendly
 

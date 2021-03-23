@@ -266,13 +266,13 @@ $(document).ready(function () {
         init: function (selector) {
             this.selector = selector;
             this.path = this.getPath(selector);
-            if ( ! this.isSourceLoaded ) {
+            if (!this.isSourceLoaded) {
                 this.loadSource();
             }
         },
         loadSource: function () {
             // console.log(this.path, 'source loading...');
-            if (this.audioElement)  {
+            if (this.audioElement) {
                 this.audioElement.src = this.path;
                 this.audioElement.load();
             } else {
@@ -355,6 +355,20 @@ $(document).ready(function () {
         },
     } // end $player
 
+    /**
+     * TOC: table des matières
+     * <a class="ui label" href="lien"><i class="icone icon"></i>label</a>
+     */
+    if ($('#toc').length > 0) {
+        var $main = $('#toc').closest('.main');
+        var $html = "<p>";
+        $main.children('h2').each(function (index) {
+            $item = '<a class="ui label" href="#' + $(this).attr('id') + '"><i class="hashtag icon"></i>' + $(this).text() + '</a>';
+            $html+=$item;
+        })
+        $html+="</p>";
+        $('#toc').html($html);
+    }
 
     /**
      * Appel Masonry pour afficher les galeries
@@ -377,7 +391,7 @@ $(document).ready(function () {
      */
     $('.ui.accordion').accordion();
     $('#about').popup({
-        hoverable  : true,
-      })
-    ;
+        hoverable: true,
+    })
+        ;
 });

@@ -28,7 +28,7 @@ menu:
     url: "/site/todo/"
     weight: 20 # pour trier le menu
 
-  # menu liens en haut du site 
+  # menu liens en haut de la page 
   # le lien sera ouvert dans un autre onglet
   navigation: # 
   - name: "Documentation sur le thème BeeDream"
@@ -41,7 +41,7 @@ menu:
     pre: "font awesome flag" # nom de l'icône de la bibliothèque des icônes
   - name: "Documentation Hugo"
     url: "https://gohugo.io/"
-    weight: 20 # pour trier le menu
+    weight: 30 # pour trier le menu
     pre: "hospital symbol" # nom de l'icône de la bibliothèque des icônes
 
 # Rendu du markdown

@@ -14,7 +14,12 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#reference)
 
-> **La version majeur est [1.0.11] 2021-03-21**
+> **La version majeur est [1.0.12] 2021-03-23**
+
+[1.0.12] - 2021.03.23
+--------------------
+- `added` shortcode toc - table des matières des titres de niveau 2 seulement
+- `added` shortcode label - label avec icone et lien
 
 [1.0.11] - 2021.03.21
 --------------------

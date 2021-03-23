@@ -5,19 +5,25 @@ date: 2021-02-23
 tags:
 - markdown
 cover: /site/media/markdown.jpg
+style: bee-doc
 menu:
   page:
-    weight: 2
+    weight: 2 # tri
 ---
 Toutes les balises du Markdown pour présenter le contenu dans les pages.
 <!--more-->
 
-> **Markdown** est un langage de balisage léger dans le but d'offrir une syntaxe facile à lire et à écrire. Un document balisé par Markdown sera converti en HTML pour être affiché dans le site web.
+> Le contenu des pages du site sera géré par un simple éditeur de texte. La présentation du texte, gras souligné, les titres, les listes, les paragraphes seront indiqués par des **balises** dans le texte.  
+La syntaxe utiliser est le [markdown](https://fr.wikipedia.org/wiki/Markdown)
+
+>**Markdown** est un langage de balisage léger dans le but d'offrir une syntaxe facile à lire et à écrire. Un document balisé par Markdown sera converti en HTML pour être affiché dans le site web.
 À l'image des outils de traitement de texte comme Word, Markdown va nous permettre de gérer le contenu et la présentation du texte dans la page.
 
 Ci-après les différentes balises du Markdown pour présenter le texte
 
-## Titre
+{{< toc >}}
+
+## Titres
 {{< colonnes two >}}
 ```tpl
 # Titre 1
@@ -283,7 +289,7 @@ soulignés
 Ma recommandation de base pour apprendre comment fonctionnent les sauts de ligne est d'expérimenter et de découvrir - appuyez une fois sur <Entrée> (c'est-à-dire, insérez une nouvelle ligne), puis appuyez deux fois (c'est-à-dire, insérez deux nouvelles lignes), voyez ce qui se passe. Vous apprendrez bientôt à obtenir ce que vous voulez. "Markdown" est votre ami.
 {{< colonnes two >}}
 ```tpl
-Voici une ligne pour nous de commencer.
+Voici une ligne pour commencer.
 
 Cette ligne est séparée de celle ci-dessus par deux nouvelles lignes, ce sera donc un paragraphe séparé.
 
@@ -291,7 +297,7 @@ Cette ligne commence également un paragraphe séparé, mais ...bb
 Cette ligne n'est séparée que par un seul saut de ligne, c'est donc une ligne distincte dans le même paragraphe .
 ```
 <--->
-Voici une ligne pour nous de commencer.
+Voici une ligne pour commencer.
 
 Cette ligne est séparée de celle ci-dessus par deux nouvelles lignes, ce sera donc un paragraphe séparé.
 

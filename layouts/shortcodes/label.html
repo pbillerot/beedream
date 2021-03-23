@@ -1,0 +1,11 @@
+<!-- 
+    TOC: table des matières
+-->
+{{$label := .Get "label" | default ""}}
+{{$icone := .Get "icone" | default ""}}
+{{$lien := .Get "lien" | default ""}}
+{{ if $lien}}
+<a class="ui label" href="{{$lien}}"><i class="{{$icone}} icon"></i>{{$label}}</a>
+{{else}}
+<div class="ui label"><i class="{{$icone}} icon"></i>{{$label}}</div>
+{{end}}

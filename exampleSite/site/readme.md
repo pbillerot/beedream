@@ -8,6 +8,10 @@ tags:
 _build:
    list: false
 
+menu:
+  page:
+    parent: technique
+
 cover: "/site/media/readme.png"
 ---
 

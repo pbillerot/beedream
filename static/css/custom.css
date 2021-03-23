@@ -105,22 +105,11 @@ pre {
 .bee-centre {
     text-align: center;
 }
-/* bee-chanson */
-.bee-chanson {
-    font-family: 'Rancho', cursive;
-    font-size: 1.7em;
-    color:saddlebrown;
-}
-.bee-chanson em {
-    font-family: 'Rancho', cursive;
-    /* font-size: 1.7em; */
-    color:grey;
-}
-.bee-chanson .ui.large.header {
-    font-family: 'Rancho', cursive;
-    font-size: 2em;
-}
 
+/* label */
+p>.ui.label {
+  margin-bottom: 1em; 
+}
 /* RETURN TO TOP */
 #return-to-top {
     position: fixed;
@@ -333,3 +322,32 @@ span.ui.text {
   span.ui.massive.text {
     font-size: 8em;
   }
+/**
+  Style valorisé dans l'entête de l'article
+  bee-chanson
+  bee-doc
+
+**/
+/* bee-doc */
+.bee-doc h2 {
+  color: darkred;
+}
+.bee-doc h3 {
+  color: darkblue;
+}
+
+/* bee-chanson */
+.bee-chanson {
+  font-family: 'Rancho', cursive;
+  font-size: 1.7em;
+  color:saddlebrown;
+}
+.bee-chanson em {
+  font-family: 'Rancho', cursive;
+  /* font-size: 1.7em; */
+  color:grey;
+}
+.bee-chanson .ui.large.header {
+  font-family: 'Rancho', cursive;
+  font-size: 2em;
+}
