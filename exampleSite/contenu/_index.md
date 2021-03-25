@@ -1,9 +1,9 @@
 ---
-title: Shortcodes
+title: Gérer le contenu
 draft: false 
 menu: 
   page:
-    identifier: shortcode
+    identifier: contenu
     weight: 20
 ---
 

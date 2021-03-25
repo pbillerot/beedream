@@ -363,7 +363,8 @@ $(document).ready(function () {
         var $main = $('#toc').closest('.main');
         var $html = "<p>";
         $main.children('h2').each(function (index) {
-            $item = '<a class="ui label" href="#' + $(this).attr('id') + '"><i class="hashtag icon"></i>' + $(this).text() + '</a>';
+            $item = '<a class="ui label" href="#' + $(this).attr('id') 
+            + '"><i class="chevron circle right icon"></i>' + $(this).text() + '</a>';
             $html+=$item;
         })
         $html+="</p>";

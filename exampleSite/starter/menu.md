@@ -1,31 +1,32 @@
 ---
-title: "Menu"
+title: "Organiser les Menus"
 date: 2021-03-08
 draft: false
 tags:
-- technique
+- menu
+- contenu
 cover: "/site/media/menu.svg"
 style: bee-doc
 menu:
   page:
-    weight: 3
+    parent: starter
+    weight: 30
 ---
 <!--more-->
 {{< image image="/site/captures/captures-menu.jpg" position="droite" taille="m" >}}
 >3 menus seront paramétrables dans le thème Beedream :
 
-1. le [menu de navigation](#menu_navigation) en haut de la page
-1. le [menu des liens](#menu_liens) dans le bas du sommaire
-1. le [menu des pages de contenu](#menu_pages) qui va se présenter au centre de la carte sommaire
+{{< toc >}}
 
-<a name="menu_navigation"></a>
-
-## Menu de navigation
->Le menu `navigation` sera décrit dans le fichier de configuration du site `/site/config.yaml`  
+## 1 - Menu de navigation
+>La barre de `navigation` de haut d'écran sera décrite exclusivement dans le fichier de configuration du site `/site/config.yaml`  
 À réserver pour des liens vers des sites externes  
-Le lien sera ouvert dans un autre onglet
+Le lien sera ouvert dans un autre onglet  
+Le nom de l'icône sera déclarée par le paramètre `pre`
 
-*À noter que l'ordre des présentation des items de menu sera trié d'abord sur la propriété `weight` et ensuite sur l'ordre alphabétique.*
+> <a href="https://fomantic-ui.com/elements/icon.html" target="_blank">{{< icone external alternate >}} Lien vers la bibliothèque d'icônes</a>
+
+*À noter que l'ordre des présentation des items de menu sera trié d'abord sur la propriété `weight` et ensuite dans l'ordre alphabétique.
 
 ```yaml
 menu:
@@ -45,30 +46,10 @@ menu:
     weight: 30 # pour trier le menu
     pre: "hospital symbol" # nom de l'icône de la bibliothèque des icônes
 ```
-<a name="menu_liens"></a>
 
-## Menu des liens
-> Le menu `links` sera réservé pour des pages générales au site du genre "A propos", "Informations légales", etc.  
-Il sera décrit dans le fichier de configuration du site `/site/config.yaml`
+## 2 - Menu des pages de contenu
 
-```yaml
-menu:
-  # menu qui va apparaître en bas de la carte du sommaire
-  # le lien sera ouvert dans l'onglet courant
-  # à réserver pour des liens vers des pages du site
-  links: 
-  - name: "README"
-    url: "/site/readme/"
-    weight: 10 # pour trier le menu
-  - name: "TODO"
-    url: "/site/todo/"
-    weight: 20 # pour trier le menu
-```
-
-<a name="menu_pages"></a>
-
-## Menu des pages de contenu
-> Ce menu sera défini au niveau de l'entête de chaque page
+> Ce menu sera défini au niveau des méta-données de chaque page
 
 ### Menu simple:
 ```yaml
@@ -80,9 +61,9 @@ tags:
 cover: /site/media/markdown.jpg
 menu:
   page:
-    weight: 2 # tri
+    weight: 1 # tri
 ```
-Pour cet exemple, le menu **Markdown** va apparaître et pointer directement sur la page.
+Pour cet exemple, le menu **Markdown** va pointer directement sur la page.
 Il ne possèdera pas de sous-menu
 
 ### Menu avec sous-menu
@@ -91,14 +72,25 @@ Il ne possèdera pas de sous-menu
 
 Dans un 1er temps il faudra définir le titre du menu dans un fichier `_index.md` ou en le déclarant dans `config.yaml` comme les autres menus.
 
+Exemple en déclarant le titre du menu dans `/site/config.yaml`
+```yaml
+menu: 
+  page:
+  - name: "Shortcodes"
+    identifier: shortcode
+    weight: 2
+```
+
 Exemple dans `/shortcodes/_index.md` l'identifiant `shortcode` sera utilisé pour raccrocher les items à ce menu.
 ```yaml
+---
 title: Shortcodes
 draft: false 
 menu: 
   page:
     identifier: shortcode
-    weight: 3
+    weight: 2
+---
 ```
 Un item du menu sera défini directement dans la page en précisant le `parent` du menu   
 Exemple avec `/shortcodes/carte.md`
@@ -116,3 +108,39 @@ menu:
   page:
     parent: shortcode
 ```
+
+## 3 - Menu des liens
+> Le menu `links` sera plus réservé pour des pages internes générales au site du genre "A propos", "Informations légales", etc.  
+Il pourra être décrit dans le fichier de configuration du site `/site/config.yaml`
+
+```yaml
+menu:
+  # menu qui va apparaître en bas de la carte du sommaire
+  # le lien sera ouvert dans l'onglet courant
+  # à réserver pour des liens vers des pages du site
+  links: 
+  - name: "README"
+    url: "/site/readme/"
+    weight: 10 # pour trier le menu
+  - name: "TODO"
+    url: "/site/todo/"
+    weight: 20 # pour trier le menu
+```
+
+mais aussi directement dans les méta-données de la page comme suit :
+
+```yaml
+---
+title: "Todo"
+date: 2021-03-08
+draft: false
+_build:
+   list: false
+cover: "/site/media/todo.png"
+# Déclaration de la page dans le menu links
+menu:
+   links:
+      weight: 10
+---
+```
+

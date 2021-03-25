@@ -1,18 +1,20 @@
 ---
-title: Markdown
+title: Syntaxe Markdown
 draft: false 
 date: 2021-02-23
 tags:
 - markdown
+- contenu
 cover: /site/media/markdown.jpg
 style: bee-doc
 menu:
   page:
-    weight: 2 # tri
+    parent: contenu
+    weight: 30
 ---
 Toutes les balises du Markdown pour présenter le contenu dans les pages.
 <!--more-->
-
+{{< image image="/site/media/markdown.jpg" position="droite" taille="m" >}}
 > Le contenu des pages du site sera géré par un simple éditeur de texte. La présentation du texte, gras souligné, les titres, les listes, les paragraphes seront indiqués par des **balises** dans le texte.  
 La syntaxe utiliser est le [markdown](https://fr.wikipedia.org/wiki/Markdown)
 

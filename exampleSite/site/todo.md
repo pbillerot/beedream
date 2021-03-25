@@ -1,13 +1,16 @@
 ---
-title: "TODO"
+title: "Todo"
 date: 2021-03-08
 draft: false
 # Ne sera par affiché dans le sommaire
 _build:
    list: false
-
 cover: "/site/media/todo.png"
+menu:
+   links:
 ---
+{{< image image="/site/media/todo.png" taille="m" position="" >}}
+
 1. [ ] shortcode player boucle
 1. [ ] Revoir le readme
 1. [ ] Démarrer avec Beedream

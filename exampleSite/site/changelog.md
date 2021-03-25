@@ -1,5 +1,5 @@
 ---
-title: "Quoi de neuf dans Beedream"
+title: "Ce qui a changé"
 date: 2021-03-11
 draft: false
 tags:
@@ -12,9 +12,16 @@ _build:
 
 <!--more-->
 
-Retrouvez ci-après tous les changements documentés et son [format](#reference)
+Retrouvez ci-après tous les changements documentés et son [format](#format)
 
-> **La version majeur est [1.0.12] 2021-03-23**
+> **La version majeur est [1.0.13] 2021-03-25**
+
+[1.0.13] - 2021.03.25
+--------------------
+- `changed` enableSearch à false par défaut
+- `changed` Label avec lien - dans nouvel onglet si préfixé par http
+- `changed` toc - icône hashtag remplacé par chevron pour éviter confusion avec les liens tag
+- `changed` documentation
 
 [1.0.12] - 2021.03.23
 --------------------
@@ -73,8 +80,7 @@ Retrouvez ci-après tous les changements documentés et son [format](#reference)
 - added: Intégration du guide directement dans le thème `exampleSite`
 
 
-<a name="reference"></a>
-Référence
+Format
 ---------
 Le format de ce document est basé sur les recommandations de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et adhère à [Semantic Versioning](https://semver.org/lang/fr/).
 

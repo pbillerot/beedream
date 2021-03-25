@@ -2,8 +2,6 @@
 title: Rive Gauche à Paris
 draft: false 
 date: 2021-02-15 
-tags: 
-- chanson
 _build:
   list: false
 
@@ -21,7 +19,6 @@ Du vieux Ferré les cris, la tempête
 Boris Vian ça s'écrit, à la trompette  
 
 >Rive Gauche à Paris  
-
 Adieu mon pays  
 De musique et de poésie  
 Les marchands malappris  

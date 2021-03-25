@@ -16,7 +16,7 @@ menu:
 ```go-html-template
 {{</* galerie repertoire /*/>}} ou
 {{</* galerie */>}}
-{{</* galet image="image" lien="lien" */>}}
+{{</* galet image="image" [lien="lien"] */>}}
 {{</* /Galerie */>}}
 ```
 <!--more-->

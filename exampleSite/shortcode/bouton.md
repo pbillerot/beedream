@@ -14,7 +14,7 @@ menu:
 ---
 
 ```go-html-template
-{{</* bouton icone="nom icone" image="image" titre="titre" lien="lien" */>}}
+{{</* bouton icone="nom icone" image="image" titre="titre" [lien="lien"] */>}}
 ```
 <!--more-->
 

@@ -14,7 +14,7 @@ menu:
 ---
 ```tpl
 {{</* cartes taille="s m l xl" */>}}
-{{</* carte image="image" diapo="diapo" titre="titre" lien="lien" pdf="pdf" taille="..." */>}}
+{{</* carte image="image" [diapo="diapo"] [titre="titre"] [lien="lien"] [pdf="pdf"] [taille="s m l xl"] */>}}
 texte...
 {{</* /carte */>}}
 {{</* /cartes */>}}

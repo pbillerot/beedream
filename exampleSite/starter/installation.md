@@ -1,41 +1,42 @@
 ---
-title: "Readme"
-date: 2021-03-07T09:26:06+01:00
+title: "Installer Beedream"
+date: 2021-03-08
+# expiryDate: 2021-03-11
 draft: false
-cover: "/site/media/readme.png"
 tags:
 - technique
-# Ne sera par affiché dans le sommaire
-_build:
-   list: false
-
-style: bee-doc
+cover: "/site/media/installation.jpg"
 
 menu:
-  links:
+  page:
+    parent: starter
+    weight: 10 
 ---
-
-THEME HUGO - BEEDREAM
-
 <!--more-->
-
 {{< toc >}}
 
 ## Installation
-L'installation est décrite sur le site [gohugo.io](https://gohugo.io)
-- https://gohugo.io/getting-started/quick-start/
+
+**Beedream** est un thème pour le moteur de site web statique [Hugo](https://gohugo.io)
+
+L'installation est décrite sur le site [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/)
 
 Résumé des commandes
 
     # Sous DEBIAN 10
     # Installation de Hugo (actuellement version 0.77)
-    sudo apt install hugo    
+    sudo apt install hugo
+    hugo version
+    
+    Hugo Static Site Generator v0.77.0-DEV linux/amd64 BuildDate: unknown
 
 ## Création du site "quickstart"
 
     hugo new site quickstart
 
-## Installation du thème "beedream"
+## Installation du thème "beedream" avec Git
+
+**beedream** sera considéré comme un sous-module du project **quickstart**
 
     cd quickstart
     git init
@@ -60,7 +61,7 @@ Démarrer votre navigateur avec l'adresse
 - http://localhost:1313/
 
 ![](/img/quickstart.png)
-![](static/img/quickstart.png)
+![](static/img/quickstart.png)hugo 
 
 ## Mise à jour du thème sur un site existant
 

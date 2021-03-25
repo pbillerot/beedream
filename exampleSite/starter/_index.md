@@ -1,9 +1,9 @@
 ---
-title: Shortcodes
+title: Démarrer
 draft: false 
 menu: 
   page:
-    identifier: shortcode
+    identifier: starter
     weight: 20
 ---
 

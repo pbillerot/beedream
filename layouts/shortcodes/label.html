@@ -5,7 +5,7 @@
 {{$icone := .Get "icone" | default ""}}
 {{$lien := .Get "lien" | default ""}}
 {{ if $lien}}
-<a class="ui label" href="{{$lien}}"><i class="{{$icone}} icon"></i>{{$label}}</a>
+<a class="ui label" href="{{$lien}}"{{if in $lien `http`}} target="_blank"{{end}}><i class="{{$icone}} icon"></i>{{$label}}</a>
 {{else}}
 <div class="ui label"><i class="{{$icone}} icon"></i>{{$label}}</div>
 {{end}}
