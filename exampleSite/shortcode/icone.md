@@ -15,13 +15,10 @@ menu:
 
 ```go-html-template
 {{</* icone nomIcone */>}}
-
 ```
 <!--more-->
-> Pour afficher une **icône** dans le texte
-
-> {{< icone arrow circle right >}} <a href="https://fomantic-ui.com/elements/icon.html" target="_blank">Lien vers la bibliothèque d'icônes</a>
-
+> Pour afficher une **icône** dans le texte  
+Le nom de l'icône sera à piocher dans la [bibliothèque d'icônes](https://fomantic-ui.com/elements/icon.html)
 
 ## Exemple
 

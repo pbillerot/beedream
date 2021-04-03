@@ -6,13 +6,13 @@
 # TITRE
 params:
   title: "Beedream"
-  subtitle: "Pour bien démarrer"
+  subtitle: "Guide d'utilisation"
   # l'image arrondie
   avatar: "/site/media/bee.svg"
   # l'icône dans l'onglet du navigateur
   favicon: "/site/media/bee.svg"
   # l'image d'arrière plan
-  backgroundImage: "/site/media/beedream.jpg"
+  backgroundImage: "/site/media/honey.jpg"
 
 # Les menus que l'on peut ajouter
 # si l'url commence par http le lien sera ouvert dans un nouvel onglet

@@ -12,7 +12,7 @@
                     </div>
                 </h1>
             </header>
-            <article class="main">{{ .Content | emojify }}</article>
+            <article id="article" class="main">{{ .Content | emojify }}</article>
         </section>
 
         <footer class="ui attached segment" data-html2canvas-ignore>
@@ -66,8 +66,7 @@
 {{ if ($.Scratch.Get "diaporama") }}
 <script src="{{ `/lightbox/js/lightgallery.min.js` | relURL }}"></script>
 <script>
-    lightGallery(document.getElementById('galerie'),{
-    });
+    lightGallery(document.getElementById('article'),{ selector: '.bee-diapo'});
 </script>
 {{ end }}
 {{ end }}

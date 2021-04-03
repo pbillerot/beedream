@@ -1,5 +1,5 @@
 ---
-title: "Organiser les Menus"
+title: "Les Menus"
 date: 2021-03-08
 draft: false
 tags:
@@ -9,12 +9,12 @@ cover: "/site/media/menu.svg"
 style: bee-doc
 menu:
   page:
-    parent: starter
-    weight: 30
+    parent: site
+    weight: 40
 ---
 <!--more-->
-{{< image image="/site/captures/captures-menu.jpg" position="droite" taille="m" >}}
->3 menus seront paramétrables dans le thème Beedream :
+{{< image image="/site/captures/captures-menu.png" position="droite" taille="m" >}}
+>4 menus seront paramétrables dans le thème Beedream :
 
 {{< toc >}}
 
@@ -26,7 +26,7 @@ Le nom de l'icône sera déclarée par le paramètre `pre`
 
 > <a href="https://fomantic-ui.com/elements/icon.html" target="_blank">{{< icone external alternate >}} Lien vers la bibliothèque d'icônes</a>
 
-*À noter que l'ordre des présentation des items de menu sera trié d'abord sur la propriété `weight` et ensuite dans l'ordre alphabétique.
+*À noter que l'ordre de présentation des items de menu sera trié d'abord sur la propriété `weight` et ensuite dans l'ordre alphabétique.*
 
 ```yaml
 menu:
@@ -67,7 +67,7 @@ Pour cet exemple, le menu **Markdown** va pointer directement sur la page.
 Il ne possèdera pas de sous-menu
 
 ### Menu avec sous-menu
-{{< image image="/site/captures/capture-menu-accordeon.jpg" position="droite"  taille="m">}}
+{{< image image="/site/captures/capture-menu-accordeon.png" position="droite"  taille="m">}}
 > Ce type de menu sera présenté sous forme d'accordéon
 
 Dans un 1er temps il faudra définir le titre du menu dans un fichier `_index.md` ou en le déclarant dans `config.yaml` comme les autres menus.
@@ -144,3 +144,18 @@ menu:
 ---
 ```
 
+## 4 - Menu des News
+> Le menu `news` sera le menu des pages évènementielles, les têtes de gondole", les pages à mettre en évidence...
+
+L'inscription d'une page à ce menu se fera via la `categorie` **news** dans les metadonnées de la page.
+
+```yaml
+---
+title: "Quoi de neuf dans Beedream"
+date: 2021-03-11
+draft: false
+tags:
+categories:
+- news
+---
+```

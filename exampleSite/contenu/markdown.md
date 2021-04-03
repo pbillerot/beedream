@@ -245,27 +245,6 @@ Saut de citation.
 > Il s'agit d'une très longue ligne qui sera toujours citée correctement lorsqu'elle se terminera. Oh mon garçon, continuons à écrire pour nous assurer que cela est assez long pour que tout le monde puisse en profiter. Oh, vous pouvez mettre du code **Markdown** dans un bloc de citation.
 {{< /colonnes >}}
 
-## HTML en ligne
-{{< colonnes two >}}
-Vous pouvez également utiliser du HTML brut dans votre Markdown, et cela fonctionnera plutôt bien.
-
-```tpl
-<dl>
-  <dt>Liste de définitions</dt>
-  <dd>Est-ce quelque chose que les gens utilisent parfois.</dd>
-  <dt>Markdown in HTML</dt>
-  <dd>Ne fonctionne *pas* **très** bien. Utilisez des <em>balises</em> HTML.</dd>
-</dl>
-```
-<--->
-<dl>
-  <dt>Liste de définitions</dt>
-  <dd>Est-ce quelque chose que les gens utilisent parfois.</dd>
-  <dt>Markdown in HTML</dt>
-  <dd>Ne fonctionne *pas* **très** bien. Utilisez des <em>balises</em> HTML.</dd>
-</dl>
-{{< /colonnes >}}
-
 ## Ligne horizontale
 {{< colonnes two >}}
 ```tpl

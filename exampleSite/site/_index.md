@@ -3,7 +3,7 @@ title: Démarrer
 draft: false 
 menu: 
   page:
-    identifier: starter
-    weight: 20
+    identifier: site
+    weight: 10
 ---
 

@@ -71,22 +71,6 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
-    // diaporama
-    if ($('#bee-diaporama').length > 0) {
-        var $diapo_size = $('#bee-diaporama').data('size')
-        var $heights = {
-            mini: 35, tiny: 80, small: 150, medium: 300, large: 450, big: 600, huge: 800, massive: 960
-        }
-        var $height = $heights[$diapo_size]
-        // console.log($height)
-        $('#bee-diaporama .card').each(function () {
-            $(this).attr('style', 'width:' + $height + 'px;')
-        });
-        $('#bee-diaporama img').each(function () {
-            $(this).attr('style', 'height:' + $height + 'px;')
-        });
-    }
-
     // RETURN TO TOP
     $(window).scroll(function () {
         if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
@@ -391,8 +375,6 @@ $(document).ready(function () {
      * SEMANTIC
      */
     $('.ui.accordion').accordion();
-    $('#about').popup({
-        hoverable: true,
-    })
-        ;
+    $('#about').popup({ hoverable: true });
+;
 });

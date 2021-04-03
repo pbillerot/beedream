@@ -1,9 +1,11 @@
 /* Personnalisation */
-
+/* 
 body, .ui.header {
     font-family: 'Jost', sans-serif;
+} */
+h2 {
+  clear: both;
 }
-
 article.main {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -16,11 +18,8 @@ article.main {
 .bee-admin, .bee-hidden {
     display: none !important;
 }
-.bee-edit-open, .bee-open, .bee-modal-image, .bee-window-open, .bee-modal-player, .bee-player, .bee-radio {
+.bee-edit-open, .bee-open, .bee-modal-image, .bee-window-open, .bee-modal-player, .bee-player, .bee-radio, .bee-diapo {
     cursor: pointer;
-}
-.ui.segment, .ui.segments .segment {
-    font-size: inherit;
 }
 
 #bee-diaporama img {
@@ -51,12 +50,8 @@ article.main {
     font-weight: 900;
 }
 /* Carte */
-.ui.card>.content>.description, .ui.cards>.card>.content>.description {
-    font-family: Lato;
-}
-.ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
-    font-family: Lato;
-    font-size: 1em;
+.ui.cards {
+  margin-left: -0.4em;
 }
 .ui.cards>.bee-card-s, .bee-card-s {
     width: 160px;
@@ -75,12 +70,6 @@ article.main {
 .ui.circular.image, .ui.circular.image>*  {
   border-radius: 50%;
 }
-/* img.ui.image {
-  margin: 0.5em;
-}
-img.ui.image:first-of-type {
-  margin-left: 0em;
-} */
 
 /* markdown */
 .markdown-body {
@@ -98,9 +87,6 @@ pre {
 }
 .ui.header .icon:only-child, i.icon.bee-icon {
     margin-right: 0;
-}
-.ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-    font-size: inherit;
 }
 .bee-centre {
     text-align: center;
@@ -322,6 +308,7 @@ span.ui.text {
   span.ui.massive.text {
     font-size: 8em;
   }
+
 /**
   Style valorisé dans l'entête de l'article
   bee-chanson
@@ -344,7 +331,6 @@ span.ui.text {
 }
 .bee-chanson em {
   font-family: 'Rancho', cursive;
-  /* font-size: 1.7em; */
   color:grey;
 }
 .bee-chanson .ui.large.header {

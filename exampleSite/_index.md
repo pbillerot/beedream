@@ -1,5 +1,5 @@
 ---
-# Page d'accueil de la documentation
+# Page d'accueil du site
 title: Guide d'utilisation de Beedream
 draft: false 
 date: 2021-02-23 
@@ -15,4 +15,4 @@ L'objet de ce site est de vous présenter le "comment"
 
 puis
 - comment le déployer sur un site
-- comment l'administrer directement sur le web en utilisant [Victor](https://github.com/pbillerot/beedream)
+- comment l'administrer directement sur le web en utilisant [Victor](https://github.com/pbillerot/victor)

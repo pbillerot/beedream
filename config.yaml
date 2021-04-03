@@ -19,7 +19,7 @@ params:
   # l'icône dans l'onglet du navigateur
   favicon: "/img/hugoSM.png"
   # l'image d'arrière
-  backgroundImage: "/img/beedream.jpg"
+  backgroundImage: "/img/honey-clair.jpg"
 
   background: "grey"
   linkColor: "seagreen"
@@ -52,15 +52,3 @@ params:
 
 outputs:
   home: ["HTML", "RSS", "JSON"]
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-  tableOfContents:
-    endLevel: 3
-    ordered: true
-    startLevel: 2
-  highlight:
-    style: friendly # monokai dracula friendly
-

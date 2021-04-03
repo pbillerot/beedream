@@ -15,12 +15,12 @@
 {{if eq $size "s"}}{{$size = "small"}}{{else if eq $size "m"}}{{$size = "medium"}}{{else if eq $size "l"}}{{$size = "large"}}{{else if eq $size "xl"}}{{$size = "big"}}{{end}}
 {{if eq $pos "gauche"}}{{$pos = "left floated"}}{{else if eq $pos "droite"}}{{$pos = "right floated"}}{{end}}
 {{if eq $forme "ronde"}}{{$forme = "circular"}}{{end}}
-{{if $url}}
+{{if $url }}
 <a href="{{ $url | relURL }}" target="_blank">
     <img class="ui {{$size}} {{$forme}} {{$pos}} image" src="{{ $src | relURL }}"></img>
 </a>
-{{else}}
-<div>
+{{else }}
+<div class="bee-diapo" data-src="{{ $src | relURL }}">
     <img class="ui {{$size}} {{$forme}} {{$pos}} image" src="{{ $src | relURL }}"></img>
 </div>
 {{end}}

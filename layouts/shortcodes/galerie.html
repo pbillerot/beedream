@@ -14,19 +14,11 @@
 {{$ext := path.Ext .Name }}
 {{$noext := strings.Replace $base $ext "" }}
 {{ if in ".svg .png .jpg .jpeg .gif" $ext }}
-{{ if $.Page.Scratch.Get "diaporama" }}
-<a class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column bee-item-masonry" href="{{ $path | relURL }}">
-    <div class="ui image">
-        <img src="{{ $path | relURL }}">
-    </div>
-</a>
-{{else}}
 <div class="sixteen wide mobile eight wide tablet five wide computer four wide large screen four wide widescreen column bee-item-masonry">
-    <div class="ui image">
+    <div class="ui image{{ if $.Page.Scratch.Get `diaporama` }} bee-diapo{{end}}" data-src="{{ $path | relURL }}">
         <img src="{{ $path | relURL }}">
     </div>
 </div>
-{{end}} <!-- end if diaporama -->
 {{end}}<!-- end if $ext -->
 {{end }}<!-- end range -->
 {{else}}

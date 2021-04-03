@@ -10,9 +10,6 @@ _build:
    list: false
 
 style: bee-doc
-
-menu:
-  links:
 ---
 
 THEME HUGO - BEEDREAM

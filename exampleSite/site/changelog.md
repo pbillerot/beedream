@@ -1,11 +1,11 @@
 ---
-title: "Ce qui a changé"
+title: "Quoi de neuf dans Beedream ?"
 date: 2021-03-11
 draft: false
 tags:
 categories:
 - news
-# Ne sera par affiché dans le sommaire
+# Ne sera pas affiché dans le sommaire
 _build:
    list: false
 ---
@@ -14,7 +14,13 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#format)
 
-> **La version majeur est [1.0.13] 2021-03-25**
+> **La version majeur est [1.0.14] 2021-04-02**
+
+[1.0.14] - 2021.04.02
+--------------------
+- `added` shortcode image possible dans diaporama
+- `changed` font semantic par défaut
+- `changed` documentation
 
 [1.0.13] - 2021.03.25
 --------------------
