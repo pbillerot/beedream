@@ -20,7 +20,7 @@
     <img class="ui {{$size}} {{$forme}} {{$pos}} image" src="{{ $src | relURL }}"></img>
 </a>
 {{else }}
-<div class="bee-diapo" data-src="{{ $src | relURL }}">
+<div class="{{ if $.Page.Scratch.Get `diaporama` }} bee-diapo{{end}}" data-src="{{ $src | relURL }}">
     <img class="ui {{$size}} {{$forme}} {{$pos}} image" src="{{ $src | relURL }}"></img>
 </div>
 {{end}}

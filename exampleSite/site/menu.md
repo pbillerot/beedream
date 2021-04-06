@@ -47,7 +47,48 @@ menu:
     pre: "hospital symbol" # nom de l'icône de la bibliothèque des icônes
 ```
 
-## 2 - Menu des pages de contenu
+## 2 - Menu des étiquettes
+
+> Chaque page peut être catégorisée par une ou plusieurs étiquettes (tags en anglais)  
+Ce menu va donc lister toutes les étiquettes trouvées sur le site dans ce menu.
+
+Exemple pour la page des Métadonnées :
+```yaml
+---
+title: "Les Métadonnées"
+date: 2021-03-08
+draft: false
+tags:
+- contenu
+- metadonnees
+
+cover: "/site/media/metadata.jpg"
+style: bee-doc
+menu:
+  page:
+    parent: contenu
+    weight: 20
+---
+```
+
+## 3 - Menu des News
+
+> Le menu `news` sera le menu des pages évènementielles, les têtes de gondole", les pages à mettre en évidence...
+
+L'inscription d'une page à ce menu se fera via la `categorie` **news** dans les metadonnées de la page.
+
+```yaml
+---
+title: "Quoi de neuf dans Beedream"
+date: 2021-03-11
+draft: false
+tags:
+categories:
+- news
+---
+```
+
+## 4 - Menu des pages
 
 > Ce menu sera défini au niveau des méta-données de chaque page
 
@@ -109,7 +150,8 @@ menu:
     parent: shortcode
 ```
 
-## 3 - Menu des liens
+## 5 - Menu des liens
+
 > Le menu `links` sera plus réservé pour des pages internes générales au site du genre "A propos", "Informations légales", etc.  
 Il pourra être décrit dans le fichier de configuration du site `/site/config.yaml`
 
@@ -141,21 +183,5 @@ cover: "/site/media/todo.png"
 menu:
    links:
       weight: 10
----
-```
-
-## 4 - Menu des News
-> Le menu `news` sera le menu des pages évènementielles, les têtes de gondole", les pages à mettre en évidence...
-
-L'inscription d'une page à ce menu se fera via la `categorie` **news** dans les metadonnées de la page.
-
-```yaml
----
-title: "Quoi de neuf dans Beedream"
-date: 2021-03-11
-draft: false
-tags:
-categories:
-- news
 ---
 ```

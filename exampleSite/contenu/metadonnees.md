@@ -79,7 +79,12 @@ cover: "/site/media/metadata.jpg"
 L'image qui sera affichée dans le sommaire de la page lorsque celle-ci sera présentée dans une liste
 {{< /carte >}}
 
-{{< carte titre="style:" >}}{{< /carte >}}
+{{< carte titre="style:" >}}
+Pour appliquer un style différent à la page  
+2 styles sont disponibles aujourd'hui:
+- [bee-chanson](/contenu/bee-chanson/)
+- [bee-doc](/contenu/bee-doc/)
+{{< /carte >}}
 
 {{< carte titre="_build:" >}}Associée avec le paramètre  
 `list: false`  
@@ -107,10 +112,17 @@ La page ne **sera plus visible** à partir de cette date.{{< /carte >}}
 ## Données de catégorisation et de classement dans les menus
 {{< cartes >}}
 
-{{< carte titre="tags:" >}}{{< /carte >}}
+{{< carte titre="tags:" >}}
+Étiquettes associées à la page pour permettre sa recherche via le [menu des étiquettes](/site/menu/#2---menu-des-étiquettes)
+{{< /carte >}}
 
-{{< carte titre="categories:" >}}{{< /carte >}}
+{{< carte titre="categories: news" >}}
+Une seule catégorie `news` aujourd'hui utilisable pour intégrer le lien de la page 
+dans le [menu des News](/site/menu/#3---menu-des-news)
+{{< /carte >}}
 
-{{< carte titre="menu: page" >}}{{< /carte >}}
+{{< carte titre="menu: page" >}}
+Pour déclarer la page dans le [menu des pages](/site/menu/#3---menu-des-pages)
+{{< /carte >}}
 
 {{< /cartes >}}

@@ -14,9 +14,15 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#format)
 
-> **La version majeur est [1.0.14] 2021-04-02**
+> **La version majeur est [1.1.0] - 2021.04.06**
 
-[1.0.14] - 2021.04.02
+[1.1.0] - 2021.04.06
+--------------------
+- `changed` shortcode image avec pointer si dans diaporama
+- `changed` font Google Jost par défaut
+- `changed` documentation
+
+[1.0.14] - 2021.04.03
 --------------------
 - `added` shortcode image possible dans diaporama
 - `changed` font semantic par défaut

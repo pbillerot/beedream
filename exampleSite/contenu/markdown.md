@@ -16,7 +16,7 @@ Toutes les balises du Markdown pour présenter le contenu dans les pages.
 <!--more-->
 {{< image image="/site/media/markdown.jpg" position="droite" taille="m" >}}
 > Le contenu des pages du site sera géré par un simple éditeur de texte. La présentation du texte, gras souligné, les titres, les listes, les paragraphes seront indiqués par des **balises** dans le texte.  
-La syntaxe utiliser est le [markdown](https://fr.wikipedia.org/wiki/Markdown)
+La syntaxe utilisée est le [markdown](https://fr.wikipedia.org/wiki/Markdown)
 
 >**Markdown** est un langage de balisage léger dans le but d'offrir une syntaxe facile à lire et à écrire. Un document balisé par Markdown sera converti en HTML pour être affiché dans le site web.
 À l'image des outils de traitement de texte comme Word, Markdown va nous permettre de gérer le contenu et la présentation du texte dans la page.

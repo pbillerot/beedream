@@ -1,8 +1,6 @@
 ---
 title: Exemple page
-# Brouillon true ou false pour mettre la page en brouillon (elle ne sera pas accessible sur le site)
 draft: false 
-# date de création
 date: 2020-12-26 
 # date de publication (la page sera visible à partir de cette date)
 publishDate: 2021-02-10 
@@ -15,7 +13,7 @@ tags:
 
 # catégories pour mettre la page dans un emplacement particulier
 categories: 
-- news 	# le lien de la page sera placé dans les actualités du Sommaire général
+#- news 	# le lien de la page sera placé dans les actualités du Sommaire général
 
 # image de couverture dans le sommaire de la page
 cover: /site/media/documents-illustration.jpg

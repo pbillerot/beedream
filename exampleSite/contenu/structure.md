@@ -15,7 +15,12 @@ menu:
 {{< toc >}}
 
 Utilisons l'exemple de page  [/contenu/exemple-page/](../exemple-page/)
+
 {{< image image="/site/captures/exemple-page.png" >}}
+
+## Métadonnées
+
+L'entête de la page encadrée par des `---` sera constituée de **métadonnées** pour décrire la page et caractériser son contenu afin de faciliter son accès dans le site.
 
 ```yaml
 ---
@@ -35,7 +40,7 @@ tags:
 
 # catégories pour mettre la page dans un emplacement particulier
 categories: 
-- news 	# le lien de la page sera placé dans les actualités du Sommaire général
+#- news 	# le lien de la page sera placé dans les actualités du Sommaire général
 
 # image de couverture dans le sommaire de la page
 cover: /site/media/documents-illustration.jpg
@@ -58,44 +63,16 @@ style: bee-doc
 (**contenu** de la *page*)
 
 ```
-## Métadonnées
-
-L'entête de la page encadrée par des `---` sera constituée de **métadonnées** pour décrire la page et caractériser son contenu afin de faciliter son accès dans le site.
-{{< cartes taille="m" >}}
-
-{{< carte titre="title:" >}}Le **titre** de la page{{< /carte >}}
-
-{{< carte titre="draft:" >}}(**true** par défaut) la page **ne sera pas visible** sur le site{{< /carte >}}
-
-{{< carte titre="date:" >}}La **date de création ou de modification**.  
-Elle sera affichée en dessous du titre de la page si la date de publication n'est pas renseignée.{{< /carte >}}
-
-{{< carte titre="publishDate:" >}}La **date de publication** de la page.  
-La page ne sera visible qu'à **partir de cette date**.  
-Elle sera affichée en dessous du titre de la page.{{< /carte >}}
-
-{{< carte titre="expiryDate:" >}}La **date d'expiration** de la page.  
-La page ne **sera plus visible** à partir de cette date.{{< /carte >}}
-
-{{< carte titre="tags:" >}}{{< /carte >}}
-
-{{< carte titre="categories:" >}}{{< /carte >}}
-
-{{< carte titre="cover:" >}}{{< /carte >}}
-
-{{< carte titre="menu:" >}}{{< /carte >}}
-
-{{< carte titre="style:" >}}{{< /carte >}}
-
-{{< carte titre="_build:" >}}Associée avec le paramètre  
-`list: false`  
-pour cacher la page dans les listes {{< /carte >}}
-
-{{< /cartes >}}
+Une [page spéciale](/contenu/metadonnees/) détaille toutes les métadonnées utilisables.
 
 ## Résumé
+{{< image image="/site/captures/summary-example.png" taille="m" position="droite" >}}
+Le texte placé entre `---` et `<!--more-->` sera présenté dans le sommaire de page dans les listes.
 
 ## Contenu
-Une page d'un site Hugo est un fichier texte avec la syntaxe **Markdown** décrite [dans cette page](/contenu/markdown/).
 
+Le texte placé qui suit  `<!--more-->` est le contenu proprement dit de la page. 
+
+La présentation du texte, gras souligné, les titres, les listes, les paragraphes seront indiqués par des balises dans le texte.
+La syntaxe utilisée est le [markdown](/contenu/markdown/).
 

@@ -1,8 +1,8 @@
 /* Personnalisation */
-/* 
+
 body, .ui.header {
     font-family: 'Jost', sans-serif;
-} */
+}
 h2 {
   clear: both;
 }
@@ -328,6 +328,9 @@ span.ui.text {
   font-family: 'Rancho', cursive;
   font-size: 1.7em;
   color:saddlebrown;
+}
+.bee-chanson .ui.segment, .ui.segments .segment {
+  font-size: inherit;
 }
 .bee-chanson em {
   font-family: 'Rancho', cursive;
