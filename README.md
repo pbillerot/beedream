@@ -51,7 +51,7 @@ Démarrer votre navigateur avec l'adresse
 
 - http://localhost:1313/
 
-![](static/img/quickstart.jpg) 
+![](static/img/quickstart.png) 
 
 ## Mise à jour du thème sur un site existant
 

@@ -14,7 +14,12 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#format)
 
-> **La version majeur est [1.1.0] - 2021.04.06**
+> **La version majeur est [1.1.1] - 2021.04.06**
+
+[1.1.1] - 2021.04.06
+--------------------
+- `changed` quickstart fond couleur
+- `changed` cover par défaut
 
 [1.1.0] - 2021.04.06
 --------------------

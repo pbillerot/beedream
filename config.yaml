@@ -19,15 +19,15 @@ params:
   # l'icône dans l'onglet du navigateur
   favicon: "/img/hugoSM.png"
   # l'image d'arrière
-  backgroundImage: "/img/honey-clair.jpg"
+  # backgroundImage: "/img/bg-bee.svg"
 
-  background: "grey"
+  background: "DarkSeaGreen" # tan DarkSeaGreen CadetBlue
   linkColor: "seagreen"
   rss: true
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: "[1.1.0] - 2021.04.06"
+  version: "[1.1.1] - 2021.04.06"
 
   enableGitInfo: true
 
