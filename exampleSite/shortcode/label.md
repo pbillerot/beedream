@@ -20,7 +20,7 @@ style: bee-doc
 <!--more-->
 > Affichage d'un bouton actif ou non  
 
-> {{< icone arrow circle right >}} <a href="https://fomantic-ui.com/elements/icon.html" target="_blank">Lien vers la bibliothèque d'icônes</a>
+> {{< icone arrow circle right >}} <a href="https://semantic-ui.com/elements/icon.html" target="_blank">Lien vers la bibliothèque d'icônes</a>
 
 
 ## Exemple

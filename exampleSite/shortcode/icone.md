@@ -18,7 +18,7 @@ menu:
 ```
 <!--more-->
 > Pour afficher une **icône** dans le texte  
-Le nom de l'icône sera à piocher dans la [bibliothèque d'icônes](https://fomantic-ui.com/elements/icon.html)
+Le nom de l'icône sera à piocher dans la [bibliothèque d'icônes](https://semantic-ui.com/elements/icon.html)
 
 ## Exemple
 

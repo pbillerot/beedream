@@ -1,6 +1,6 @@
 <article class="ui attached segment card dream-card">
   <a class="image" href="{{ .Permalink }}">
-    {{ if isset .Params "cover" }}
+    {{ if .Params.cover }}
     <img src="{{ .Params.cover | relURL }}" alt="{{ .Title }}" />
     {{ else }}
     <img src="/img/default{{ index (shuffle (seq 1 4)) 0 }}.jpg" alt="{{ .Title }}" />
@@ -24,7 +24,7 @@
   </div>
 
   <div class="extra content">
-    {{ if isset .Params "tags" }}
+    {{ if .Params.tags }}
     {{ range $tag := .Params.tags }}
     <a class="ui label" href="{{ `tags/` | relLangURL }}{{ $tag | urlize }}/" title="{{ $tag }}">#{{ $tag }}</a>
     {{ end }}

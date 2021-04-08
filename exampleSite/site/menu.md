@@ -24,7 +24,7 @@ menu:
 Le lien sera ouvert dans un autre onglet  
 Le nom de l'icône sera déclarée par le paramètre `pre`
 
-> <a href="https://fomantic-ui.com/elements/icon.html" target="_blank">{{< icone external alternate >}} Lien vers la bibliothèque d'icônes</a>
+> <a href="https://semantic-ui.com/elements/icon.html" target="_blank">{{< icone external alternate >}} Lien vers la bibliothèque d'icônes</a>
 
 *À noter que l'ordre de présentation des items de menu sera trié d'abord sur la propriété `weight` et ensuite dans l'ordre alphabétique.*
 

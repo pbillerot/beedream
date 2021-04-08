@@ -25,4 +25,4 @@ menu:
 {{</* bouton image="/site/media/hugo-logo.png" titre="Documentation HUGO" lien="https://gohugo.io/" */>}}
 {{</* bouton icone="github" titre="Sources sur Github" lien="https://github.com/pbillerot/beedream" */>}}
 ```
-- <a href="https://fomantic-ui.com/elements/icon.html" target="_blank">Lien vers la bibliothèque d'icônes</a>
+- <a href="https://semantic-ui.com/elements/icon.html" target="_blank">Lien vers la bibliothèque d'icônes</a>

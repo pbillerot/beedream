@@ -1,13 +1,115 @@
-# Changelog
+---
+title: "Quoi de neuf dans Beedream ?"
+date: 2021-03-11
+draft: false
+tags:
+categories:
+- news
+# Ne sera pas affiché dans le sommaire
+_build:
+   list: false
+---
 
-All notable changes to this project will be documented in this file.
+<!--more-->
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+Retrouvez ci-après tous les changements documentés et son [format](#format)
 
-> **The Major Update in 2021-02-14:**
+> **La version majeur est [1.1.2] - 2021.04.08**
 
-## [1.0.0] - "2021".02.14
+[1.1.2] - 2021.04.08
+--------------------
+- `fixed` menu navigation qui n'était pas affiché en prod
+- `changed` config.root.yaml
 
-- Init version
+[1.1.1] - 2021.04.06
+--------------------
+- `changed` quickstart fond couleur
+- `changed` cover par défaut
 
+[1.1.0] - 2021.04.06
+--------------------
+- `changed` shortcode image avec pointer si dans diaporama
+- `changed` font Google Jost par défaut
+- `changed` documentation
+
+[1.0.14] - 2021.04.03
+--------------------
+- `added` shortcode image possible dans diaporama
+- `changed` font semantic par défaut
+- `changed` documentation
+
+[1.0.13] - 2021.03.25
+--------------------
+- `changed` enableSearch à false par défaut
+- `changed` Label avec lien - dans nouvel onglet si préfixé par http
+- `changed` toc - icône hashtag remplacé par chevron pour éviter confusion avec les liens tag
+- `changed` documentation
+
+[1.0.12] - 2021.03.23
+--------------------
+- `added` shortcode toc - table des matières des titres de niveau 2 seulement
+- `added` shortcode label - label avec icone et lien
+
+[1.0.11] - 2021.03.21
+--------------------
+- `changed` shortcode image - sans border margin et padding - `forme="ronde"`
+- `changed` shortcode player - paramétre `boucle`
+- `removed` shortcode radio - remplacé par `player` avec option `boucle`
+
+[1.0.10] - 2021.03.18
+--------------------
+- `fixed` players non encadrés
+
+[1.0.9] - 2021.03.18
+--------------------
+- `fixed` barre scroll verticale cachée désormais
+
+[1.0.8] - 2021.03.18
+--------------------
+- `fixed` pointer sur player radio
+
+[1.0.7] - 2021.03.15
+--------------------
+- `fixed` suppression scrollbar horizontal sur article
+
+[1.0.6] - 2021.03.16
+--------------------
+- `fixed` suppression scrollbar sur card header
+
+[1.0.5] - 2021.03.15
+--------------------
+- `fixed` débordement image plus grande que l'article
+
+[1.0.4] - 2021.03.14
+--------------------
+- `fixed` affichage de l'image `cover` qui ne gérait pas le chemin lié à l'environnement
+
+[1.0.3] - 2021.03.13
+--------------------
+- `changed` menu `main` renommer en `page`
+- `changed` menu `card` renommer en `links`
+
+[1.0.2] - 2021.03.12
+--------------------
+- fixed: chemin des images avec le préfixe de `baseURL` automatique car défini dans l'environnement `config/hugo/config.yaml`
+
+[1.0.1] - 2021.03.11
+--------------------
+- fixed: Menu card - l'url doit se terminer par un /
+
+[1.0.0] - 2021.03.11
+--------------------
+- added: Intégration du guide directement dans le thème `exampleSite`
+
+
+Format
+---------
+Le format de ce document est basé sur les recommandations de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et adhère à [Semantic Versioning](https://semver.org/lang/fr/).
+
+###### Types de changements:
+`added` *pour les nouvelles fonctionnalités.*  
+`changed` *pour les changements aux fonctionnalités préexistantes.*  
+`deprecated` *pour les fonctionnalités qui seront bientôt supprimées*.  
+`removed` *pour les fonctionnalités désormais supprimées.*  
+`fixed` *pour les corrections de bugs.*  
+`security` *en cas de vulnérabilités.*  

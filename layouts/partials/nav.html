@@ -4,7 +4,7 @@
     </a>
     <!-- MENU NAVIGATION -->
     {{ range .Site.Menus.navigation }}
-    <a class="item bee-admin" href="{{ .URL }}" style="color: black !important;" {{if in .URL `http`}}target="_blank"
+    <a class="item" href="{{ .URL }}" style="color: black !important;" {{if in .URL `http`}}target="_blank"
         {{end}}>
         <i class="large {{ .Pre }} icon" title="{{ .Name }}"></i>
     </a>

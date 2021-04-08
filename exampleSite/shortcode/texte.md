@@ -35,4 +35,4 @@ Le {{< texte orange l >}}Lorem Ipsum{{< /texte >}} est simplement du faux texte 
 
 {{</*centre*/>}}{{</* texte bleu l */>}}Le Lorem Ipsum **est** simplement {{</* icone bell */>}} du faux texte.{{</* /texte */>}}{{</*/centre*/>}}
 ```
-- <a href="https://fomantic-ui.com/elements/icon.html" target="_blank">Lien vers la bibliothèque d'icônes</a>
+- <a href="https://semantic-ui.com/elements/icon.html" target="_blank">Lien vers la bibliothèque d'icônes</a>
