@@ -1,5 +1,7 @@
 ---
 title: "Quoi de neuf dans Beedream ?"
+# cd exampleSite/site
+# ln -s ../../CHANGELOG.md CHANGELOG.md
 date: 2021-03-11
 draft: false
 tags:
@@ -14,7 +16,14 @@ _build:
 
 Retrouvez ci-après tous les changements documentés et son [format](#format)
 
-> **La version majeur est [1.1.2] - 2021.04.08**
+[1.1.4] - 2021.04.09
+--------------------
+- `fixed` liens symboliques relatifs
+
+[1.1.3] - 2021.04.09
+--------------------
+- `changed` lien symbolique chnagelog.md readme.md config.yaml dans /site
+- `changed` diaporama possible dans page d'accueil
 
 [1.1.2] - 2021.04.08
 --------------------

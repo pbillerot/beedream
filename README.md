@@ -1,3 +1,18 @@
+---
+title: "Readme"
+# cd exempleSite/site
+# ln -s ../../README.md README.md
+# ln -s ../../static/img/quickstart.png quickstart.png
+date: 2021-03-11
+draft: false
+tags:
+- technique
+categories:
+# Ne sera pas affiché dans le sommaire
+_build:
+   list: false
+---
+<!--more-->
 # THEME HUGO - BEEDREAM
 
 ## Installation
@@ -50,6 +65,8 @@ Comme précisé dans la documentation de Hugo
 Démarrer votre navigateur avec l'adresse
 
 - http://localhost:1313/
+
+{{< image image="/site/quickstart.png" >}}
 
 ![](static/img/quickstart.png) 
 
