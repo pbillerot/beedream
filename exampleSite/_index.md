@@ -6,6 +6,8 @@ date: 2021-02-23
 ---
 Installer, Utiliser Beedream et Déployer son site...
 <!--more-->
+{{< diaporama >}}
+{{< image image="/site/media/paper.jpg" taille="m" position="droite" >}}
 
 {{< texte rouge l >}}Beedream{{< /texte >}} est un thème pour le générateur de site web [**Hugo**](https://gohugo.io/).
 
@@ -16,3 +18,4 @@ L'objet de ce site est de vous présenter le "comment"
 puis
 - comment le déployer sur un site
 - comment l'administrer directement sur le web en utilisant [Victor](https://github.com/pbillerot/victor)
+

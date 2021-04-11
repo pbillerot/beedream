@@ -17,7 +17,7 @@
                     </div>
                 </h1>
             </header>
-            <article class="main">{{ .Content | emojify }}</article>
+            <article id="article" class="main">{{ .Content | emojify }}</article>
         </section>
 
         <footer class="ui attached segment" data-html2canvas-ignore>
@@ -30,10 +30,9 @@
                 {{if .Draft }}
                 <i class="firstdraft red icon" title="brouillon"></i>
                 {{end}}
-                {{if or .PublishDate .ExpiryDate }}
+                {{if .ExpiryDate }}
                 <div class="ui yellow image label bee-admin">
                     <i class="clock outline icon"></i>
-                    {{if .PublishDate}}<span title="date publication">{{.PublishDate.Format "2006-01-02"}}</span>{{end}}
                     {{if .ExpiryDate}}
                     <div class="detail" title="date expiration">{{.ExpiryDate.Format "2006-01-02"}}</div>
                     {{end}}
@@ -81,7 +80,6 @@
 {{ end }}
 
 {{ define "js" }}
-{{if eq .Site.Params.typeSite "documentation" }}
 <script src="{{ `/js/html2canvas.min.js` | relURL }}"></script>
 <script src="{{ `/js/post.js` | relURL }}"></script>
 <!-- Load PhotoSwipe js if the load-photoswipe shortcode has been used -->
@@ -92,13 +90,7 @@
 {{ if ($.Scratch.Get "diaporama") }}
 <script src="{{ `/lightbox/js/lightgallery.min.js` | relURL }}"></script>
 <script>
-    lightGallery(document.getElementById('galerie'),{
-    });
+    lightGallery(document.getElementById('article'),{ selector: '.bee-diapo'});
 </script>
-{{end}}
-{{else}}
-<script src="{{ `/js/imagesloaded.pkgd.min.js` | relURL }}"></script>
-<script src="{{ `/js/masonry.pkgd.min.js` | relURL }}"></script>
-<script src="{{ `/js/grid.js` | relURL }}"></script>
 {{ end }}
-{{end}}
+{{ end }}

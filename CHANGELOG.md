@@ -13,6 +13,10 @@ _build:
 ---
 <!--more-->
 
+1.1.8 du 11 avril 2021
+----------------------
+- `fixed` diaporama qui ne fonctionnait pas dans page home
+
 1.1.7 du 11 avril 2021
 ----------------------
 - `fixed` relURL for icon and backgroundimage
@@ -31,7 +35,7 @@ _build:
 
 [1.1.3] - 2021.04.09
 --------------------
-- `changed` lien symbolique chnagelog.md readme.md config.yaml dans /site
+- `changed` lien symbolique changelog.md readme.md config.yaml dans /site
 - `changed` diaporama possible dans page d'accueil
 
 [1.1.2] - 2021.04.08
