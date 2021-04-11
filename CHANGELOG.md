@@ -11,10 +11,11 @@ categories:
 _build:
    list: false
 ---
-
 <!--more-->
 
-Retrouvez ci-après tous les changements documentés et son [format](#format)
+1.1.5 du 11 avril 2021
+----------------------
+- `fixed` footer article débordement si absence d'étiquettes
 
 [1.1.4] - 2021.04.09
 --------------------
@@ -110,10 +111,6 @@ Retrouvez ci-après tous les changements documentés et son [format](#format)
 --------------------
 - added: Intégration du guide directement dans le thème `exampleSite`
 
-
-Format
----------
-Le format de ce document est basé sur les recommandations de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) et adhère à [Semantic Versioning](https://semver.org/lang/fr/).
 
 ###### Types de changements:
 `added` *pour les nouvelles fonctionnalités.*  
