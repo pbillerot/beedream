@@ -13,6 +13,10 @@ _build:
 ---
 <!--more-->
 
+1.1.7 du 11 avril 2021
+----------------------
+- `fixed` relURL for icon and backgroundimage
+
 1.1.6 du 11 avril 2021
 ----------------------
 - `fixed` footer affichage

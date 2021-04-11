@@ -1,7 +1,7 @@
 {{ if eq hugo.Environment "production" }}
-<link href="{{ .Site.Params.favicon }}" rel="shortcut icon" type="image/x-icon" />
+<link href="{{ .Site.Params.favicon  | relURL}}" rel="shortcut icon" type="image/x-icon" />
 {{else}}
-<link href="{{ .Site.Params.faviconDev }}" rel="shortcut icon" type="image/x-icon" />
+<link href="{{ .Site.Params.faviconDev | relURL}}" rel="shortcut icon" type="image/x-icon" />
 {{end}}
 {{ if eq .Type "posts" }}
 <!-- Page Author & Description -->
@@ -15,12 +15,12 @@
 
 <!-- Add to homescreen for Chrome on Android -->
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" sizes="192x192" href="{{ .Site.Params.favicon }}">
+<link rel="icon" sizes="192x192" href="{{ .Site.Params.favicon | relURL}}">
 <!-- Add to homescreen for Safari on iOS -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="{{.Site.Params.title}}">
-<link rel="apple-touch-icon-precomposed" href="{{ .Site.Params.favicon }}">
+<link rel="apple-touch-icon-precomposed" href="{{ .Site.Params.favicon | relURL }}">
 
 <!-- Site Generator -->
 {{ hugo.Generator }}
@@ -73,7 +73,7 @@
 
     {{ if .Site.Params.backgroundImage }}
     {{if eq hugo.Environment "production" "development" }}
-    background-image: url('{{ .Site.Params.backgroundImage}}');
+    background-image: url('{{ .Site.Params.backgroundImage | relURL}}');
     {{else}}
     background-image: url('/{{hugo.Environment}}{{ .Site.Params.backgroundImage}}');
     {{end}}
