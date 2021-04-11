@@ -13,6 +13,10 @@ _build:
 ---
 <!--more-->
 
+1.1.6 du 11 avril 2021
+----------------------
+- `fixed` footer affichage
+
 1.1.5 du 11 avril 2021
 ----------------------
 - `fixed` footer article débordement si absence d'étiquettes

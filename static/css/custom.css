@@ -10,7 +10,7 @@ article.main {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-ui.attached.segment {
+.ui.attached.segment {
   overflow: auto;
 }
 .ui.bee-segment-image {
