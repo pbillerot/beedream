@@ -13,6 +13,10 @@ _build:
 ---
 <!--more-->
 
+1.2.0 du 13 avril 2021
+----------------------
+- `added` shortcode code
+
 1.1.8 du 11 avril 2021
 ----------------------
 - `fixed` diaporama qui ne fonctionnait pas dans page home
