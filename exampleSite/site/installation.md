@@ -34,7 +34,7 @@ Résumé des commandes
 
     hugo new site quickstart
 
-## Instaler le thème "beedream" avec Git
+## Installer le thème "beedream" avec Git
 
 **Beedream** est un thème pour le moteur de site web statique [Hugo](https://gohugo.io)
 

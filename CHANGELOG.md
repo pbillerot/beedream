@@ -13,6 +13,10 @@ _build:
 ---
 <!--more-->
 
+1.2.1 du 18 avril 2021
+----------------------
+- `fixed` orthographe instaler/installer
+
 1.2.0 du 13 avril 2021
 ----------------------
 - `added` shortcode code
