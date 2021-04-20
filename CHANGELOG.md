@@ -13,6 +13,11 @@ _build:
 ---
 <!--more-->
 
+1.2.2 du 20 avril 2021
+----------------------
+- `removed` template config
+- `added` render-link render-image universels
+
 1.2.1 du 18 avril 2021
 ----------------------
 - `fixed` orthographe instaler/installer

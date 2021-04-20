@@ -5,11 +5,6 @@
 
 # TITRE
 baseURL: "/"
-languageCode: "fr-FR"
-defaultContentLanguage: "fr"
-
-RelativeURLs: true
-CanonifyURLs: true
 
 params:
   title: "TITRE DU SITE"
@@ -17,9 +12,9 @@ params:
   # l'image arrondie
   avatar: "/img/bee.svg"
   # l'icône dans l'onglet du navigateur
-  favicon: "/img/hugoSM.png"
+  favicon: "/img/bee.svg"
   # l'image d'arrière
-  # backgroundImage: "/img/bg-bee.svg"
+  backgroundImage: "/img/honey.jpg"
 
   background: "DarkSeaGreen" # tan DarkSeaGreen CadetBlue
   linkColor: "seagreen"
@@ -27,7 +22,7 @@ params:
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: "1.2.1 du 18 avril 2021"
+  version: "1.2.2 du 20 avril 2021"
 
   enableGitInfo: true
 
@@ -50,5 +45,18 @@ params:
   hugo: "https://gohugo.io/"
   victor: "https://github.com/pbillerot/victor"
 
+# CONFIG lié au thème
+languageCode: "fr-FR"
+defaultContentLanguage: "fr"
+RelativeURLs: true
+CanonifyURLs: true
+theme: "beedream"
 outputs:
   home: ["HTML", "RSS", "JSON"]
+# Rendu du markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: friendly # monokai dracula friendly

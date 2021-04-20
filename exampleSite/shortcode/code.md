@@ -22,7 +22,7 @@ style: bee-doc
 
 ## Exemple
 
-{{< code "/site/config.yaml" "yaml" >}}
+{{</* code "/site/config.yaml" "yaml" */>}}
 
 ```tpl
 {{</* code "/site/config.yaml" "yaml" */>}}
