@@ -12,15 +12,15 @@
 {{$pdf := .Get "pdf" | default ""}}
 {{$path := .Get "lien" | default ""}}
 {{ if $path }}
-<div class="ui compact icon message bee-window-open" data-path="{{ $path }}">
-    {{if $img }}<img src="{{$img}}" style="max-height: 3em;margin-right: 2em;">{{else}}<i class="{{$icon}} icon"></i>{{end}}
+<div class="ui compact icon message bee-window-open" data-path="{{ $path | relURL }}">
+    {{if $img }}<img src="{{$img | relURL}}" style="max-height: 3em;margin-right: 2em;">{{else}}<i class="{{$icon}} icon"></i>{{end}}
     <div class="content">
         <p>{{ $title }}</p>
     </div>
 </div>
 {{ else }}
-<div class="ui compact icon message bee-modal-image" data-img="{{ $img }}" data-pdf="{{ $pdf }}">
-    {{if $img }}<img src="{{$img}}">{{else}}<i class="{{$icon}} icon"></i>{{end}}
+<div class="ui compact icon message bee-modal-image" data-img="{{ $img | relURL }}" data-pdf="{{ $pdf | relURL }}">
+    {{if $img }}<img src="{{$img | relURL}}">{{else}}<i class="{{$icon}} icon"></i>{{end}}
     <div class="content">
         <p>{{ $title }}</p>
     </div>

@@ -13,6 +13,10 @@ _build:
 ---
 <!--more-->
 
+
+----------------------
+- `fixed` correction chemin des media et ressource pour prendre en compte une baseURL différente de "/"
+
 1.2.2 du 20 avril 2021
 ----------------------
 - `removed` template config

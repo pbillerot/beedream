@@ -20,15 +20,15 @@
 {{$size = index .Parent.Params "taille"}}
 {{end}}
 {{$size = .Get "taille" | default $size }}
-<div {{if and $img $pdf $url}}class="card bee-window-open bee-card-{{$size}}" data-img="{{$img}}" data-pdf="{{$pdf}}" data-path="{{$url}}"{{else if and $img $pdf}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$img}}" data-pdf="{{$pdf}}"{{else if $url}}class="card bee-window-open bee-card-{{$size}}" data-path="{{$url}}"{{else if $img}}class="card bee-card-{{$size}}" data-img="{{$img}}"{{else if $diapo}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$diapo}}"{{else}}class="card bee-card-{{$size}}"{{end}}>
+<div {{if and $img $pdf $url}}class="card bee-window-open bee-card-{{$size}}" data-img="{{$img | relURL}}" data-pdf="{{$pdf | relURL}}" data-path="{{$url | relURL}}"{{else if and $img $pdf}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$img | relURL}}" data-pdf="{{$pdf | relURL}}"{{else if $url}}class="card bee-window-open bee-card-{{$size}}" data-path="{{$url | relURL}}"{{else if $img}}class="card bee-card-{{$size}}" data-img="{{$img | relURL}}"{{else if $diapo}}class="card bee-modal-image bee-card-{{$size}}" data-img="{{$diapo | relURL}}"{{else}}class="card bee-card-{{$size}}"{{end}}>
     {{ if $img }}
     <div class="image">
-        <img src="{{$img}}">
+        <img src="{{$img | relURL}}">
     </div>
     {{end}}
     {{ if $diapo }}
     <div class="image">
-        <img src="{{$diapo}}">
+        <img src="{{$diapo | relURL}}">
     </div>
     {{end}}
     {{ if $title }}
@@ -40,7 +40,7 @@
     </div>
     {{end}}
     {{ if $pdf }}
-    <div class="ui bottom attached button bee-window-open" data-path="{{ $pdf }}">
+    <div class="ui bottom attached button bee-window-open" data-path="{{ $pdf | relURL }}">
         <i class="file pdf icon"></i>
         Télécharger le document
     </div>

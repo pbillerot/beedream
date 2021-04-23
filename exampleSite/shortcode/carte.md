@@ -30,7 +30,7 @@ texte...
 
 {{< carte titre="Hébergement" pdf="/site/media/hebergement.pdf" >}}{{< /carte >}}
 
-{{< carte image="/site/media/markdown.jpg" titre="La syntaxe du Markdown" lien="/markdown/syntax" taille="m" >}}
+{{< carte image="/site/media/markdown.jpg" titre="La syntaxe du Markdown" lien="/contenu/markdown/" taille="m" >}}
 Markdown est un *langage de balisage léger* dans le but d’offrir une syntaxe facile à lire et à écrire.  
 Un document balisé par **Markdown** sera converti en **HTML** avant d'être affiché dans le site web.
 {{< /carte >}}
