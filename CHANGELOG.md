@@ -18,6 +18,10 @@ _build:
 - [ ] 
 - [ ] 
 
+1.3.2 du 25 avril 2021
+----------------------
+- `fixed` shortcode carte open ds blank si http
+
 1.3.1 du 25 avril 2021
 ----------------------
 - `removed` shortcode galet

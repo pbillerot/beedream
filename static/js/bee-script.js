@@ -27,9 +27,9 @@ $(document).ready(function () {
     $(".bee-window-open").on('click', function (event) {
         $path = $(this).data('path')
         if ($path.indexOf("http") > -1) {
-            window.location = computePath($path + "/");
-        } else {
             window.open(computePath($path + "/"), "_blank")
+        } else {
+            window.location = computePath($path + "/");
         }
         event.preventDefault();
     });
