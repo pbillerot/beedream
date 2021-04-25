@@ -18,6 +18,10 @@ _build:
 - [ ] 
 - [ ] 
 
+1.3.3 du 25 avril 2021
+----------------------
+- `fixed` url cover si baseurl
+
 1.3.2 du 25 avril 2021
 ----------------------
 - `fixed` shortcode carte open ds blank si http
