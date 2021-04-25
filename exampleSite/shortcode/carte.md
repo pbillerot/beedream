@@ -3,6 +3,7 @@ title: Carte
 draft: false 
 date: 2021-02-20 
 cover: /site/media/shortcode.svg
+style: bee-doc
 tags:
 - shortcode
 # Ne sera par affiché dans le sommaire

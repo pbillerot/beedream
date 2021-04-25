@@ -3,6 +3,7 @@ title: Diaporama
 draft: false 
 date: 2021-02-20 
 cover: /site/media/shortcode.svg
+style: bee-doc
 tags:
 - shortcode
 # Ne sera par affiché dans le sommaire
@@ -15,27 +16,21 @@ menu:
 
 ```go-html-template
 {{</* diaporama */>}}
-{{</* Galerie [repertoire] */>}}
 ```
 <!--more-->
-> Diaporama des images d'une galerie  
+> Diaporama des images d'une page
 > Il suffira de placer le code `{{</* diaporama */>}}` dans la page pour visulaiser les images dans un diaporama.
 
 ## Exemple
 
 ```go-html-template
 {{</* diaporama */>}}
-{{</* galerie */>}}
-{{</* galet image="/site/media/deploiement.png" */>}}
-{{</* galet image="/site/media/markdown.jpg" */>}}
-{{</* galet image="/site/media/shortcode.svg" */>}}
-{{</* galet image="/site/media/default2.jpg" */>}}
-{{</* /galerie */>}}
+{{</* image image="/site/media/default1.jpg" */>}}
+{{</* image image="/site/media/default1.jpg" */>}}
 ```
 {{< diaporama >}}
-{{< galerie >}}
-{{< galet image="/site/media/deploiement.png" >}}
-{{< galet image="/site/media/markdown.jpg" >}}
-{{< galet image="/site/media/shortcode.svg" >}}
-{{< galet image="/site/media/default2.jpg" >}}
-{{< /galerie >}}
+
+{{< image image="/site/media/default1.jpg" >}}
+
+{{< image image="/site/media/default2.jpg" >}}
+

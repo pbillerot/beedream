@@ -13,7 +13,22 @@ _build:
 ---
 <!--more-->
 
+À VENIR
+-------
+- [ ] 
+- [ ] 
 
+1.3.1 du 25 avril 2021
+----------------------
+- `removed` shortcode galet
+- `changed` shortcode repertoire qui utilise Page.resources
+
+1.3 du 24 avril 2021
+----------------------
+- `fixed` correction chemin des cover dans les sommaires
+- `changed` galerie avec vignette des images présentes dans le répertoire et sous-répertoires
+
+1.2.3 du 23 avril 2021
 ----------------------
 - `fixed` correction chemin des media et ressource pour prendre en compte une baseURL différente de "/"
 

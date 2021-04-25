@@ -3,7 +3,7 @@
     {{ if .Params.cover }}
     <img src="{{ .Params.cover | relURL }}" alt="{{ .Title }}" />
     {{ else }}
-    <img src="/img/default{{ index (shuffle (seq 1 4)) 0 }}.jpg" alt="{{ .Title }}" />
+    <img src="{{ printf `/img/default%d.jpg` (index (shuffle (seq 1 4)) 0) | relURL }}" alt="{{ .Title }}" />
     {{ end }}
   </a>
 

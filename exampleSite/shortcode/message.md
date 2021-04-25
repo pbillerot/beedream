@@ -3,6 +3,7 @@ title: Message
 draft: false 
 date: 2021-02-22 
 cover: /site/media/shortcode.svg
+style: bee-doc
 tags:
 - shortcode
 # Ne sera par affiché dans le sommaire

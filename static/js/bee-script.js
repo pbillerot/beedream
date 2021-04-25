@@ -25,7 +25,12 @@ $(document).ready(function () {
         event.preventDefault();
     });
     $(".bee-window-open").on('click', function (event) {
-        window.open(computePath($(this).data('path') + "/"), "_blank");
+        $path = $(this).data('path')
+        if ($path.indexOf("http") > -1) {
+            window.location = computePath($path + "/");
+        } else {
+            window.open(computePath($path + "/"), "_blank")
+        }
         event.preventDefault();
     });
 
