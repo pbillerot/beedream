@@ -70,11 +70,7 @@
     {{ end }}
 
     {{ if .Site.Params.backgroundImage }}
-    {{if eq hugo.Environment "production" "development" }}
     background-image: url('{{ .Site.Params.backgroundImage | relURL}}');
-    {{else}}
-    background-image: url('/{{hugo.Environment}}{{ .Site.Params.backgroundImage}}');
-    {{end}}
     {{ end }}
   }
   {{ end }}

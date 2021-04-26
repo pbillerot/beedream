@@ -18,6 +18,10 @@ _build:
 - [ ] 
 - [ ] 
 
+1.3.4 du 26 avril 2021
+----------------------
+- `removed` suppression spécificité env hugo
+
 1.3.3 du 25 avril 2021
 ----------------------
 - `fixed` url cover si baseurl
