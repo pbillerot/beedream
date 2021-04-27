@@ -12,7 +12,7 @@
     {{ with $file }}
     {{ range . }}
     {{if eq .ResourceType "image"}}
-    <div class="ui compact message bee-modal-image" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
+    <div class="ui compact message bee-modal-image" data-type="{{ .REsourceType }}" data-path="{{ .RelPermalink | relURL }}">
         <img class="ui middle aligned mini image" src="{{ .RelPermalink | relURL }}">
         <span>{{ .Name }}</span>
     </div>
