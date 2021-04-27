@@ -37,7 +37,6 @@ menu:
 │   ├── presentation.odp
 │   ├── presentation.ppt
 │   ├── presentation.pptx
-│   ├── README.md
 │   ├── tableur.ods
 │   ├── tableur.xls
 │   ├── tableur.xlsx
@@ -46,8 +45,8 @@ menu:
 ```
 ### index.md
 ```tpl
-{{</* repertoire "fichiers" */>}}
+{{</* repertoire "/shortcode/fichiers" */>}}
 ```
 ### résultat
-{{< repertoire "fichiers" >}}
+{{< repertoire "/shortcode/fichiers" >}}
 

@@ -15,12 +15,16 @@ _build:
 
 À VENIR
 -------
-- [ ] shortcode apropos et enlever le lien en bas du sommaire
 - [ ] 
+
+1.3.7 du 27 avril 2021
+----------------------
+- `changed` shortcode repertoire abandon utilisation de Page.Resource
 
 1.3.6 du 27 avril 2021
 ----------------------
 - `changed` shortcode repertoire check type word
+- `changed` shortcode apropos - suppression du lien en bas de sommaire
 
 1.3.5 du 27 avril 2021
 ----------------------

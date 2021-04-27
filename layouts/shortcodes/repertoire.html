@@ -1,58 +1,54 @@
 <!-- 
     Affichage des images d'un répertoire
-    repertoire   : répertoire des images
+    dir   : répertoire des images
+    class : class css semantic à appliquer
 -->
-{{ $.Page.Scratch.Set "galerie" 1 }}
-{{$dir := .Get 0 | default ""}}
+{{$dir := .Get 0 | default "/"}}
 <div class="ui segment">
-    {{$file := .Page.Resources }}
-    {{if $dir }}
-    {{ $file = (.Page.Resources.Match (printf "%s/*" $dir)) }}
-    {{end}}
-    {{ with $file }}
-    {{ range . }}
-    {{if eq .ResourceType "image"}}
-    <div class="ui compact message bee-modal-image" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <img class="ui middle aligned mini image" src="{{ .RelPermalink | relURL }}">
-        <span>{{ .Name }}</span>
+    {{ range (readDir (printf "/content%s" $dir ) ) }}
+    {{ $path := (printf "%s/%s" $dir .Name )}}
+    {{ $ext := (path.Ext .Name) }}
+    {{ if eq $ext ".md" }}
+    <div class="ui compact message bee-open" data-path="{{ replace $path `.md` `` | relURL }}">
+        <i class="green file alternate outline large icon"></i>{{ path.Base .Name }}
     </div>
-    {{else if in .MediaType "audio"}}
-    <div class="ui compact message bee-modal-player" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}" data-base="{{ path.Base .Name }}">
-        <i class="file audio orange large icon"></i>{{ .Name }}
+    {{ else if or (eq $ext ".jpg") (eq $ext ".jpeg") (eq $ext ".png") (eq $ext ".svg") (eq $ext ".gif") }}
+    <div class="ui compact message bee-modal-image" data-path="{{ $path | relURL }}">
+        <img class="ui middle aligned mini image" src="{{ $path | relURL }}">
+        <span>{{ path.Base .Name }}</span>
     </div>
-    {{else if in .MediaType "pdf"}}
-    <div class="ui compact message bee-window-open" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file pdf red large icon"></i>{{ .Name }}
+    {{ else if eq $ext ".yaml" }}
+    <div class="ui compact message bee-open" data-path="{{ replace $path `.yaml` `` | relURL}}">
+        <i class="file code outline brown large icon"></i>{{ path.Base .Name }}
     </div>
-    {{else if in .MediaType "yaml"}}
-    <div class="ui compact message bee-window-open" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file code outline grey large icon"></i>{{ .Name }}
+    {{ else if eq $ext ".pdf" }}
+    <div class="ui compact message bee-window-open" data-path="{{ $path | relURL }}">
+        <i class="file pdf red large icon"></i>{{ path.Base .Name }}
     </div>
-    {{else if in .MediaType "octet-stream"}}
-    <div class="ui compact message bee-window-open" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file alternate outline blue large icon"></i>{{ .Name }}
+    {{ else if eq $ext ".zip" }}
+    <div class="ui compact message bee-window-open" data-path="{{ $path | relURL }}">
+        <i class="file archive brown large icon"></i>{{ path.Base .Name }}
     </div>
-    {{else if or (in .MediaType "excel") (in .MediaType "spreadsheet")}}
-    <div class="ui compact message bee-window-open" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file excel outline violet large icon"></i>{{ .Name }}
+    {{ else if or (eq $ext ".doc") (eq $ext ".dot") (eq $ext ".docx") (eq $ext ".dotx") (eq $ext ".odt")}}
+    <div class="ui compact message bee-window-open" data-path="{{ $path | relURL }}">
+        <i class="file word outline blue large icon"></i>{{ path.Base .Name }}
     </div>
-    {{else if or (in .MediaType "word") (in .MediaType "opendocument.text")}}
-    <div class="ui compact message bee-window-open" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file word outline blue large icon"></i>{{ .Title }}
+    {{ else if or (eq $ext ".xls") (eq $ext ".xlsx") (eq $ext ".ods")}}
+    <div class="ui compact message bee-window-open" data-path="{{ $path | relURL }}">
+        <i class="file excel outline violet large icon"></i>{{ path.Base .Name }}
     </div>
-    {{else if or (in .MediaType "powerpoint") (in .MediaType "presentation")}}
-    <div class="ui compact message bee-window-open" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file powerpoint outline red large icon"></i>{{ .Name }}
+    {{ else if or (eq $ext ".ppt") (eq $ext ".pps") (eq $ext ".pptx") (eq $ext ".ppsx") (eq $ext ".odp") (eq $ext ".odt")}}
+    <div class="ui compact message bee-window-open" data-path="{{ $path | relURL }}">
+        <i class="file powerpoint outline pink large icon"></i>{{ path.Base .Name }}
     </div>
-    {{else if or (in .MediaType "zip") (in .MediaType "tar")}}
-    <div class="ui compact message bee-window-open" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file archive outline brown large icon"></i>{{ .Name }}
+    {{ else if or (eq $ext ".wav") (eq $ext ".mp3") (eq $ext ".ogg") (eq $ext ".wma")}}
+    <div class="ui compact message bee-modal-player" data-path="{{ $path | relURL }}" data-base="{{ path.Base .Name }}">
+        <i class="file audio outline orange large icon"></i>{{ path.Base .Name }}
     </div>
-    {{else}}
-    <div class="ui compact message bee-open" data-type="{{ .ResourceType }} }}" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file alternate outline darkgrey large icon"></i>{{ .Name }}
+    {{ else }}
+    <div class="ui compact message bee-window-open" data-path="{{ $path | relURL }}">
+        <i class="file outline grey large icon"></i>{{ path.Base .Name }}
     </div>
-    {{end}}
     {{ end }}
     {{ end }}
 </div>
