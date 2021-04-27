@@ -15,7 +15,11 @@ _build:
 
 À VENIR
 -------
-- [ ] 
+- [ ] repertoire voir comment download document
+
+1.3.8 du 27 avril 2021
+----------------------
+- `changed` shortcode repertoire download document
 
 1.3.7 du 27 avril 2021
 ----------------------

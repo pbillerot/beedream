@@ -21,7 +21,7 @@ article.main {
 .bee-admin, .bee-hidden {
     display: none !important;
 }
-.bee-edit-open, .bee-open, .bee-modal-image, .bee-window-open, .bee-modal-player, .bee-player, .bee-radio, .bee-diapo {
+.bee-edit-open, .bee-open, .bee-modal-image, .bee-window-open, .bee-modal-player, .bee-player, .bee-radio, .bee-diapo, .bee-select-download {
     cursor: pointer;
 }
 

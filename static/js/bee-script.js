@@ -26,7 +26,7 @@ $(document).ready(function () {
     });
     $(".bee-window-open").on('click', function (event) {
         $path = $(this).data('path')
-        if ($path.indexOf("http") > -1) {
+        if ($path.indexOf("http") > -1 || $path.indexOf(".pdf") > -1)   {
             window.open(computePath($path + "/"), "_blank")
         } else {
             window.location = computePath($path + "/");
@@ -48,6 +48,17 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
+    $('.bee-select-download').on('click', function (event) {
+        var $path = $(this).data('path');
+        var $base = $(this).data('base');
+        var link = document.createElement('a');
+        link.href = $path;
+        link.download = $base;
+        link.click();
+        // window.open($selected.paths, '_blank');
+        event.preventDefault();
+      });
+    
     // CLIC IMAGE POPUP
     $('.bee-modal-image').on('click', function (event) {
         var $pdf = $(this).data('pdf');
