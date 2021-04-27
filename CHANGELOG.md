@@ -15,8 +15,14 @@ _build:
 
 À VENIR
 -------
+- [ ] shortcode apropos et enlever le lien en bas du sommaire
 - [ ] 
-- [ ] 
+
+1.3.5 du 27 avril 2021
+----------------------
+- `added` shortcode about
+- `changed` icone about dans le footer du sommaire
+- `removed` shortcode diapo
 
 1.3.4 du 26 avril 2021
 ----------------------

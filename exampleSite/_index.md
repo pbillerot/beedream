@@ -17,3 +17,4 @@ puis
 - comment le déployer sur un site
 - comment l'administrer directement sur le web en utilisant [Victor](https://github.com/pbillerot/victor)
 
+{{< about >}}
