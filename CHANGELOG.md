@@ -18,6 +18,10 @@ _build:
 - [ ] shortcode apropos et enlever le lien en bas du sommaire
 - [ ] 
 
+1.3.6 du 27 avril 2021
+----------------------
+- `changed` shortcode repertoire check type word
+
 1.3.5 du 27 avril 2021
 ----------------------
 - `added` shortcode about

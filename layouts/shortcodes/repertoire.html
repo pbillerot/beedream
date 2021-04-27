@@ -12,45 +12,45 @@
     {{ with $file }}
     {{ range . }}
     {{if eq .ResourceType "image"}}
-    <div class="ui compact message bee-modal-image" data-path="{{ .RelPermalink | relURL }}">
+    <div class="ui compact message bee-modal-image" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
         <img class="ui middle aligned mini image" src="{{ .RelPermalink | relURL }}">
         <span>{{ .Name }}</span>
     </div>
     {{else if in .MediaType "audio"}}
-    <div class="ui compact message bee-modal-player" data-path="{{ .RelPermalink | relURL }}" data-base="{{ path.Base .Name }}">
+    <div class="ui compact message bee-modal-player" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}" data-base="{{ path.Base .Name }}">
         <i class="file audio orange large icon"></i>{{ .Name }}
     </div>
     {{else if in .MediaType "pdf"}}
-    <div class="ui compact message bee-window-open" data-path="{{ .RelPermalink | relURL }}">
+    <div class="ui compact message bee-window-open" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
         <i class="file pdf red large icon"></i>{{ .Name }}
     </div>
     {{else if in .MediaType "yaml"}}
-    <div class="ui compact message bee-window-open" data-path="{{ .RelPermalink | relURL }}">
+    <div class="ui compact message bee-window-open" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
         <i class="file code outline grey large icon"></i>{{ .Name }}
     </div>
     {{else if in .MediaType "octet-stream"}}
-    <div class="ui compact message bee-window-open" data-path="{{ .RelPermalink | relURL }}">
+    <div class="ui compact message bee-window-open" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
         <i class="file alternate outline blue large icon"></i>{{ .Name }}
     </div>
     {{else if or (in .MediaType "excel") (in .MediaType "spreadsheet")}}
-    <div class="ui compact message bee-window-open" data-path="{{ .RelPermalink | relURL }}">
+    <div class="ui compact message bee-window-open" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
         <i class="file excel outline violet large icon"></i>{{ .Name }}
     </div>
-    {{else if or (in .MediaType "msword") (in .MediaType "wordprocessingml.document") (in .MediaType "opendocument.text")}}
-    <div class="ui compact message bee-window-open" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file word outline blue large icon"></i>{{ .Name }}
+    {{else if or (in .MediaType "word") (in .MediaType "opendocument.text")}}
+    <div class="ui compact message bee-window-open" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
+        <i class="file word outline blue large icon"></i>{{ .Title }}
     </div>
     {{else if or (in .MediaType "powerpoint") (in .MediaType "presentation")}}
-    <div class="ui compact message bee-window-open" data-path="{{ .RelPermalink | relURL }}">
+    <div class="ui compact message bee-window-open" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
         <i class="file powerpoint outline red large icon"></i>{{ .Name }}
     </div>
     {{else if or (in .MediaType "zip") (in .MediaType "tar")}}
-    <div class="ui compact message bee-window-open" data-path="{{ .RelPermalink | relURL }}">
+    <div class="ui compact message bee-window-open" data-type="{{ .REsourceType }} data-path="{{ .RelPermalink | relURL }}">
         <i class="file archive outline brown large icon"></i>{{ .Name }}
     </div>
     {{else}}
-    <div class="ui compact message bee-open" data-path="{{ .RelPermalink | relURL }}">
-        <i class="file alternate outline darkgrey large icon"></i>{{ .Name }} - {{.MediaType}}
+    <div class="ui compact message bee-open" data-type="{{ .ResourceType }}" data-path="{{ .RelPermalink | relURL }}">
+        <i class="file alternate outline darkgrey large icon"></i>{{ .Name }}
     </div>
     {{end}}
     {{ end }}
