@@ -16,13 +16,13 @@ params:
   # l'image d'arrière
   backgroundImage: "/img/honey.jpg"
 
-  background: "DarkSeaGreen" # tan DarkSeaGreen CadetBlue
+  background: "lightsteelblue" 
   linkColor: "seagreen"
   rss: true
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: "1.3.8 du 27 avril 2021"
+  version: "1.3.9 du 28 avril 2021"
 
   enableGitInfo: true
 
@@ -33,11 +33,6 @@ params:
   enableRobotsTXT: true
 
   enableSearch: false
-
-  advanced:
-    customCSS:
-    - "css/custom.css"
-    customJS:
 
   # Url
   help: "https://beedream.billerot.eu/"

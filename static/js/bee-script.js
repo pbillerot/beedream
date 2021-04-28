@@ -26,7 +26,7 @@ $(document).ready(function () {
     });
     $(".bee-window-open").on('click', function (event) {
         $path = $(this).data('path')
-        if ($path.indexOf("http") > -1 || $path.indexOf(".pdf") > -1)   {
+        if ($path.indexOf("http") > -1 || $path.indexOf(".pdf") > -1) {
             window.open(computePath($path + "/"), "_blank")
         } else {
             window.location = computePath($path + "/");
@@ -57,8 +57,8 @@ $(document).ready(function () {
         link.click();
         // window.open($selected.paths, '_blank');
         event.preventDefault();
-      });
-    
+    });
+
     // CLIC IMAGE POPUP
     $('.bee-modal-image').on('click', function (event) {
         var $pdf = $(this).data('pdf');
@@ -82,6 +82,52 @@ $(document).ready(function () {
                 },
                 onApprove: function () {
                     window.open($pdf, "_blank");
+                }
+            }).modal('show');
+        event.preventDefault();
+    });
+
+    // PDF VIEWER
+    $('.bee-modal-viewer').on('click', function (event) {
+        var $path = $(this).data('path');
+        var $base = $(this).data('base');
+        var $type = $(this).data('type');
+        var $height = screen.availHeight - 400;
+        var $content = $('#bee-modal-viewer').find('.content');
+        $content[0].innerHTML = '<object data="' + $path + '" type="' + $type + '" height="' + $height + '" width="100%" typemustmatch></object>';
+        $('#bee-modal-viewer')
+            .modal({
+                closable: true,
+                onHide: function () {
+                    return true;
+                },
+                onApprove: function () {
+                    var link = document.createElement('a');
+                    link.href = $path;
+                    link.download = $base;
+                    link.click();
+                }
+            }).modal('show');
+        event.preventDefault();
+    });
+    // TEXT VIEWER
+    $('.bee-modal-text').on('click', function (event) {
+        var $path = $(this).data('path');
+        var $base = $(this).data('base');
+        var $height = screen.availHeight - 400;
+        $('#bee-text').height($height);
+        $('#bee-text').load($path);
+        $('#bee-modal-text')
+            .modal({
+                closable: true,
+                onHide: function () {
+                    return true;
+                },
+                onApprove: function () {
+                    var link = document.createElement('a');
+                    link.href = $path;
+                    link.download = $base;
+                    link.click();
                 }
             }).modal('show');
         event.preventDefault();
@@ -363,11 +409,11 @@ $(document).ready(function () {
         var $main = $('#toc').closest('.main');
         var $html = "<p>";
         $main.children('h2').each(function (index) {
-            $item = '<a class="ui label" href="#' + $(this).attr('id') 
-            + '"><i class="chevron circle right icon"></i>' + $(this).text() + '</a>';
-            $html+=$item;
+            $item = '<a class="ui label" href="#' + $(this).attr('id')
+                + '"><i class="chevron circle right icon"></i>' + $(this).text() + '</a>';
+            $html += $item;
         })
-        $html+="</p>";
+        $html += "</p>";
         $('#toc').html($html);
     }
 
@@ -392,5 +438,5 @@ $(document).ready(function () {
      */
     $('.ui.accordion').accordion();
     $('#about').popup({ hoverable: true });
-;
+    ;
 });

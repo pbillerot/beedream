@@ -15,7 +15,14 @@ _build:
 
 À VENIR
 -------
-- [ ] repertoire voir comment download document
+- [ ] 
+- [ ] 
+- [ ] 
+
+1.3.9 du 28 avril 2021
+----------------------
+- `added` viewer pdf texte
+- `changed` beedream.css
 
 1.3.8 du 27 avril 2021
 ----------------------
