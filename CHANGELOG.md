@@ -17,7 +17,11 @@ _build:
 -------
 - [ ] 
 - [ ] 
-- [ ] 
+
+1.3.10 du 4 mai 2021
+----------------------
+- `added` diaporama sur carte avec image et sans url
+- `removed` render image
 
 1.3.9 du 28 avril 2021
 ----------------------

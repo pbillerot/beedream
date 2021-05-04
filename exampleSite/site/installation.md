@@ -69,7 +69,7 @@ Démarrer votre navigateur avec l'adresse
 
 - http://localhost:1313/
 
-{{< image image="/site/media/quickstart.jpg" taille="l">}}
+{{< image image="/site/media/quickstart.png" taille="l">}}
 ![](static/img/quickstart.jpg) 
 
 ## Mettre à jour le thème sur un site existant
