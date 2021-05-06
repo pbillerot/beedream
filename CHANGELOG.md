@@ -15,7 +15,12 @@ _build:
 
 À VENIR
 -------
-- https://1.semantic-ui.com/elements/icon.html#/icons 
+- bug shortcode texte dans colonnes qui créé <p>...</p>
+
+1.3.13 du 6 mai 2021
+----------------------
+- `fixed` ajout render-image pour prendre nen compte baseurl
+- `changed` lien icones https://1.semantic-ui.com/elements/icon.html#/icons 
 
 1.3.12 du 6 mai 2021
 ----------------------

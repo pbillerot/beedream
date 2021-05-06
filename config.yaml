@@ -22,7 +22,7 @@ params:
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: "1.3.12 du 6 mai 2021"
+  version: "1.3.13 du 6 mai 2021"
 
   enableGitInfo: true
 
@@ -35,7 +35,7 @@ params:
   enableSearch: false
 
   # Url
-  help: "https://beedream.billerot.eu/"
+  help: "https://www.billerot.eu/beedream"
   github: "https://github.com/pbillerot/beedream"
   hugo: "https://gohugo.io/"
   victor: "https://github.com/pbillerot/victor"
