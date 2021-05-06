@@ -82,11 +82,8 @@
 {{ define "js" }}
 <script src="{{ `/js/html2canvas.min.js` | relURL }}"></script>
 <script src="{{ `/js/post.js` | relURL }}"></script>
-<!-- Load PhotoSwipe js if the load-photoswipe shortcode has been used -->
-{{ if ($.Scratch.Get "galerie") }}
 <script src="{{ `/js/imagesloaded.pkgd.min.js` | relURL }}"></script>
 <script src="{{ `/js/masonry.pkgd.min.js` | relURL }}"></script>
-{{ end }}
 {{ if ($.Scratch.Get "diaporama") }}
 <script src="{{ `/lightbox/js/lightgallery.min.js` | relURL }}"></script>
 <script>

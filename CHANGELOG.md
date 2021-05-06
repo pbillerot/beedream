@@ -15,8 +15,12 @@ _build:
 
 À VENIR
 -------
-- [ ] 
-- [ ] 
+- https://1.semantic-ui.com/elements/icon.html#/icons 
+
+1.3.11 du 6 mai 2021
+----------------------
+- `fixed` carte sommaire non gérée par masonry dans index.html
+- `changed` shortcode icone avec 4 arguments
 
 1.3.10 du 4 mai 2021
 ----------------------
