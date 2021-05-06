@@ -17,6 +17,10 @@ _build:
 -------
 - https://1.semantic-ui.com/elements/icon.html#/icons 
 
+1.3.12 du 6 mai 2021
+----------------------
+- `fixed` carte sommaire non gérée par masonry dans index.html - ajout include grid.js
+
 1.3.11 du 6 mai 2021
 ----------------------
 - `fixed` carte sommaire non gérée par masonry dans index.html
