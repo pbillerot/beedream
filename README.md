@@ -19,7 +19,9 @@ _build:
 
 **Beedream** est un thème pour le moteur de site web statique [Hugo](https://gohugo.io)
 
-L'installation est décrite sur le site [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/)
+L'installation de Hugo est décrite sur le site [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/)
+
+La documentation complète du thème se retrouve [ici](https://www.billerot.eu/beedream/)
 
 Résumé des commandes
 
@@ -65,8 +67,6 @@ Comme précisé dans la documentation de Hugo
 Démarrer votre navigateur avec l'adresse
 
 - http://localhost:1313/
-
-{{< image image="/site/quickstart.png" >}}
 
 ![](static/img/quickstart.png) 
 

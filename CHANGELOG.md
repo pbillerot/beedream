@@ -17,6 +17,10 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
+1.3.14 du 15 juin 2021
+----------------------
+- `fixed` lien aide sur beedream dans README 
+
 1.3.13 du 6 mai 2021
 ----------------------
 - `fixed` ajout render-image pour prendre nen compte baseurl
