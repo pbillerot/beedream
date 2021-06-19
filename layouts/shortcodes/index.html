@@ -1,0 +1,16 @@
+<!-- 
+    Index des pages du répertoire et de ses sous-répertoires
+-->
+
+{{$dir := .Get 0 | default "/"}}
+{{ range (readDir (printf "content%s" $dir)) }}
+  {{ if .IsDir }}
+    <p>{{ .Name | title }}</p>
+    <ul>
+    {{ $path := printf "content%s/%s/" $dir .Name }}
+    {{ range where $.Site.RegularPages "File.Dir" $path }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
+  {{ end }}
+{{ end }}
