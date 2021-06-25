@@ -17,6 +17,10 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
+1.3.17 du 25 juin 2021
+----------------------
+- `removed` debug rendre-link
+
 1.3.16 du 25 juin 2021
 ----------------------
 - `debug` debug rendre-link
