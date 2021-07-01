@@ -17,6 +17,10 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
+1.4.1 du 1er juillet 2021
+----------------------
+- `fixed` implémentation Google Analytics - correction balise
+
 1.4.0 du 1er juillet 2021
 ----------------------
 - `added` implémentation Google Analytics v4

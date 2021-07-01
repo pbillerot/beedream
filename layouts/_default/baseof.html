@@ -29,8 +29,16 @@
       {{ partial "search.html" . }}
     {{ end }}
 
-    {{ if .Site.GoogleAnalytics }}
-      {{ template "_internal/google_analytics.html" . }}
-    {{ end }}
+{{ if .Site.GoogleAnalytics }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KG8JGE1BWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KG8JGE1BWH');
+</script>
+{{ end }}
   </body>
 </html>
