@@ -17,6 +17,10 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
+1.4.0 du 1er juillet 2021
+----------------------
+- `added` implémentation Google Analytics v4
+
 1.3.17 du 25 juin 2021
 ----------------------
 - `removed` debug rendre-link
