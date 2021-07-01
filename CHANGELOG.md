@@ -17,7 +17,11 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
-1.4.1 du 1er juillet 2021
+1.4.2 du 1er juillet 2021
+----------------------
+- `fixed` oubli utilisation de la variable .Site.GoogleAnalytics
+
+1.4.2 du 1er juillet 2021
 ----------------------
 - `fixed` implémentation Google Analytics - correction balise
 

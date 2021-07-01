@@ -22,7 +22,7 @@ params:
 
   email: "philippe.billerot@gmail.com"
   siteStartYear: 2021
-  version: "1.4.1 du 1er juillet 2021"
+  version: "1.4.2 du 1er juillet 2021"
 
   enableGitInfo: true
 
