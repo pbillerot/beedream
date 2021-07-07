@@ -17,6 +17,10 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
+1.4.3 du 7 juillet 2021
+----------------------
+- `changed` titre onglet = titre de la page
+
 1.4.2 du 1er juillet 2021
 ----------------------
 - `fixed` oubli utilisation de la variable .Site.GoogleAnalytics
