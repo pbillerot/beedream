@@ -17,6 +17,10 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
+1.5.0 du 15 aout 2021
+----------------------
+- `added` template full page si /embed
+
 1.4.3 du 7 juillet 2021
 ----------------------
 - `changed` titre onglet = titre de la page

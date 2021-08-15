@@ -31,7 +31,7 @@ article.main {
 
 /* message */
 .compact.message {
-    margin: 0.5em;
+    /* margin: 0.5em; */
     padding: 0.5em 1em;
 }
 .ui.icon.message.bee-player
