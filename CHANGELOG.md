@@ -17,6 +17,10 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
+1.5.1 du 16 aout 2021
+----------------------
+- `removed` icomoon.css embed/single.html
+
 1.5.0 du 15 aout 2021
 ----------------------
 - `added` template full page si /embed
