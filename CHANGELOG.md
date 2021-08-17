@@ -17,6 +17,10 @@ _build:
 -------
 - bug shortcode texte dans colonnes qui créé <p>...</p>
 
+1.5.2 du 17 aout 2021
+----------------------
+- `fixed` AudioContext is not a constructor dans TorBrowser
+
 1.5.1 du 16 aout 2021
 ----------------------
 - `removed` icomoon.css embed/single.html
